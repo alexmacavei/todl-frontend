@@ -1,0 +1,108 @@
+<div class="search-container">
+  <h1>Search</h1>
+
+  <div class="search-box">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Search books and authors</mat-label>
+      <input matInput [formControl]="searchControl" placeholder="Enter search term...">
+      <mat-icon matPrefix>search</mat-icon>
+      @if (searchControl.value) {
+        <button mat-icon-button matSuffix (click)="clearSearch()">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+  </div>
+
+  @if (loading()) {
+    <div class="loading">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  } @else if (hasSearched()) {
+    <mat-tab-group>
+      <mat-tab label="Books ({{ books().length }})">
+        <div class="tab-content">
+          @if (books().length === 0) {
+            <div class="empty-state">
+              <mat-icon>library_books</mat-icon>
+              <p>No books found</p>
+            </div>
+          } @else {
+            <div class="results-grid">
+              @for (book of books(); track book.id) {
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title>{{ book.title }}</mat-card-title>
+                    @if (book.author) {
+                      <mat-card-subtitle>by {{ book.author.name }}</mat-card-subtitle>
+                    }
+                  </mat-card-header>
+                  <mat-card-content>
+                    @if (book.description) {
+                      <p class="description">{{ book.description }}</p>
+                    }
+                    @if (book.isbn) {
+                      <p class="detail"><strong>ISBN:</strong> {{ book.isbn }}</p>
+                    }
+                    @if (book.genre) {
+                      <p class="detail"><strong>Genre:</strong> {{ book.genre }}</p>
+                    }
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <a mat-button [routerLink]="['/books', book.id]">
+                      <mat-icon>visibility</mat-icon>
+                      View Details
+                    </a>
+                  </mat-card-actions>
+                </mat-card>
+              }
+            </div>
+          }
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Authors ({{ authors().length }})">
+        <div class="tab-content">
+          @if (authors().length === 0) {
+            <div class="empty-state">
+              <mat-icon>person</mat-icon>
+              <p>No authors found</p>
+            </div>
+          } @else {
+            <div class="results-grid">
+              @for (author of authors(); track author.id) {
+                <mat-card>
+                  <mat-card-header>
+                    <mat-card-title>{{ author.name }}</mat-card-title>
+                    @if (author.nationality) {
+                      <mat-card-subtitle>{{ author.nationality }}</mat-card-subtitle>
+                    }
+                  </mat-card-header>
+                  <mat-card-content>
+                    @if (author.birthDate) {
+                      <p class="detail"><strong>Born:</strong> {{ author.birthDate | date }}</p>
+                    }
+                    @if (author.biography) {
+                      <p class="biography">{{ author.biography }}</p>
+                    }
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <a mat-button [routerLink]="['/authors', author.id]">
+                      <mat-icon>visibility</mat-icon>
+                      View Details
+                    </a>
+                  </mat-card-actions>
+                </mat-card>
+              }
+            </div>
+          }
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  } @else {
+    <div class="empty-state">
+      <mat-icon>search</mat-icon>
+      <p>Enter a search term to find books and authors</p>
+    </div>
+  }
+</div>
