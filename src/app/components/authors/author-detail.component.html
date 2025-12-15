@@ -1,0 +1,59 @@
+<div class="detail-container">
+  @if (loading()) {
+    <div class="loading">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  } @else if (author()) {
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ author()!.name }}</mat-card-title>
+        @if (author()!.nationality) {
+          <mat-card-subtitle>{{ author()!.nationality }}</mat-card-subtitle>
+        }
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="section">
+          <h3>Details</h3>
+          <div class="details-grid">
+            @if (author()!.birthDate) {
+              <div class="detail-item">
+                <strong>Birth Date:</strong>
+                <span>{{ author()!.birthDate | date }}</span>
+              </div>
+            }
+            @if (author()!.nationality) {
+              <div class="detail-item">
+                <strong>Nationality:</strong>
+                <span>{{ author()!.nationality }}</span>
+              </div>
+            }
+          </div>
+        </div>
+
+        @if (author()!.biography) {
+          <div class="section">
+            <h3>Biography</h3>
+            <p>{{ author()!.biography }}</p>
+          </div>
+        }
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button routerLink="/authors">
+          <mat-icon>arrow_back</mat-icon>
+          Back to List
+        </button>
+        <div class="spacer"></div>
+        <a mat-raised-button color="primary" [routerLink]="['/authors', author()!.id, 'edit']">
+          <mat-icon>edit</mat-icon>
+          Edit
+        </a>
+        <button mat-raised-button color="warn" (click)="deleteAuthor()">
+          <mat-icon>delete</mat-icon>
+          Delete
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  }
+</div>

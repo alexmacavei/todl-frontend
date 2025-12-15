@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$todl-primary: mat.m2-define-palette(mat.$m2-indigo-palette);
+$todl-accent: mat.m2-define-palette(mat.$m2-pink-palette, A200, A100, A400);
+$todl-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$todl-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $todl-primary,
+    accent: $todl-accent,
+    warn: $todl-warn,
+  ),
+));
+
+@include mat.all-component-themes($todl-theme);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+

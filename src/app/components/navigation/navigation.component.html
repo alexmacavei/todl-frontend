@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <span class="toolbar-title">TODL Library</span>
+  <span class="spacer"></span>
+  
+  @if (auth.isAuthenticated$ | async) {
+    <a mat-button routerLink="/books" routerLinkActive="active">Books</a>
+    <a mat-button routerLink="/authors" routerLinkActive="active">Authors</a>
+    <a mat-button routerLink="/search" routerLinkActive="active">Search</a>
+    
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+      @if (auth.user$ | async; as user) {
+        {{ user.name }}
+      }
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        Logout
+      </button>
+    </mat-menu>
+  } @else {
+    <button mat-button (click)="login()">
+      <mat-icon>login</mat-icon>
+      Login
+    </button>
+  }
+</mat-toolbar>

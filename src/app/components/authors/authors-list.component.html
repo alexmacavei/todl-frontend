@@ -1,0 +1,56 @@
+<div class="authors-container">
+  <div class="header">
+    <h1>Authors</h1>
+    <a mat-raised-button color="primary" routerLink="/authors/new">
+      <mat-icon>add</mat-icon>
+      Add Author
+    </a>
+  </div>
+
+  @if (loading()) {
+    <div class="loading">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  } @else if (authors().length === 0) {
+    <div class="empty-state">
+      <mat-icon>person</mat-icon>
+      <p>No authors found</p>
+      <a mat-raised-button color="primary" routerLink="/authors/new">Add Your First Author</a>
+    </div>
+  } @else {
+    <div class="authors-grid">
+      @for (author of authors(); track author.id) {
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{ author.name }}</mat-card-title>
+            @if (author.nationality) {
+              <mat-card-subtitle>{{ author.nationality }}</mat-card-subtitle>
+            }
+          </mat-card-header>
+          <mat-card-content>
+            @if (author.birthDate) {
+              <p class="date"><strong>Born:</strong> {{ author.birthDate | date }}</p>
+            }
+            @if (author.biography) {
+              <p class="biography">{{ author.biography }}</p>
+            }
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button [routerLink]="['/authors', author.id]">
+              <mat-icon>visibility</mat-icon>
+              View
+            </a>
+            <a mat-button [routerLink]="['/authors', author.id, 'edit']">
+              <mat-icon>edit</mat-icon>
+              Edit
+            </a>
+            <button mat-button color="warn" (click)="deleteAuthor(author.id!)">
+              <mat-icon>delete</mat-icon>
+              Delete
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  }
+</div>

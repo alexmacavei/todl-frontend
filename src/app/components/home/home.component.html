@@ -1,0 +1,66 @@
+<div class="home-container">
+  @if (auth.isAuthenticated$ | async) {
+    <div class="welcome-section">
+      <h1>Welcome to TODL Library</h1>
+      @if (auth.user$ | async; as user) {
+        <p class="subtitle">Hello, {{ user.name }}!</p>
+      }
+      <p>Manage your book collection and discover new authors.</p>
+    </div>
+
+    <div class="features-grid">
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>library_books</mat-icon>
+          <mat-card-title>Books</mat-card-title>
+          <mat-card-subtitle>Manage your book collection</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Browse, create, edit, and delete books in your library. Keep track of all your favorite titles.</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button color="primary" routerLink="/books">Go to Books</a>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person</mat-icon>
+          <mat-card-title>Authors</mat-card-title>
+          <mat-card-subtitle>Manage author information</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Add and manage information about your favorite authors. Track their biographies and works.</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button color="primary" routerLink="/authors">Go to Authors</a>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar>search</mat-icon>
+          <mat-card-title>Search</mat-card-title>
+          <mat-card-subtitle>Find books and authors</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Quickly search through your entire library to find the books and authors you're looking for.</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button color="primary" routerLink="/search">Go to Search</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  } @else {
+    <div class="login-section">
+      <mat-icon class="large-icon">library_books</mat-icon>
+      <h1>Welcome to TODL Library</h1>
+      <p class="subtitle">Your personal book management system</p>
+      <p>Please log in to access your library and manage your books and authors.</p>
+      <button mat-raised-button color="primary" (click)="login()">
+        <mat-icon>login</mat-icon>
+        Log In
+      </button>
+    </div>
+  }
+</div>
