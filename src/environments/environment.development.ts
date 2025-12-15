@@ -1,12 +1,12 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8080/api',
+  apiUrl: 'http://localhost:3000',
   auth0: {
-    domain: 'YOUR_AUTH0_DOMAIN',
-    clientId: 'YOUR_AUTH0_CLIENT_ID',
+    domain: 'dev-sjyfsge8f4eop2kc.eu.auth0.com',
+    clientId: 'ws3CbmeyQIeygFfQWNy6Q2MiZnswltA3',
     authorizationParams: {
       redirect_uri: window.location.origin,
-      audience: 'YOUR_AUTH0_AUDIENCE'
+      // audience: 'http://localhost:3000'
     }
   }
 };

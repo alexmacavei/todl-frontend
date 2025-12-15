@@ -23,12 +23,12 @@ export const appConfig: ApplicationConfig = {
             uri: `${environment.apiUrl}/*`,
             tokenOptions: {
               authorizationParams: {
-                audience: environment.auth0.authorizationParams.audience
-              }
-            }
-          }
-        ]
-      }
-    })
-  ]
+                // audience: environment.auth0.authorizationParams.audience,
+              },
+            },
+          },
+        ],
+      },
+    }),
+  ],
 };
