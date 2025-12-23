@@ -7,7 +7,9 @@ The frontend application for TODL - A comprehensive book and author management s
 - **Authentication**: Secure authentication using Auth0 by Okta
 - **Books Management**: Create, read, update, and delete books
 - **Authors Management**: Create, read, update, and delete authors
+- **Collections Management**: Create collections and organize books
 - **Search Functionality**: Search for books and authors across your library
+- **Internationalization**: Support for multiple languages (English and Romanian)
 - **Modern UI**: Built with Angular Material Design components
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
 
@@ -83,6 +85,90 @@ npm start
 ```
 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Internationalization (i18n)
+
+The application supports **runtime language switching** using ngx-translate, allowing users to change the language without reloading the application.
+
+### Available Languages
+
+- **English (en)** - Default language 🇬🇧
+- **Romanian (ro)** - Romanian translation 🇷🇴
+
+### Switching Languages
+
+Users can switch languages using the language switcher in the top-right corner of the navigation bar. The language selection is:
+- **Flag icon** in the toolbar showing the current language
+- Click to open a dropdown menu with available languages
+- Selected language is saved in browser's local storage
+- No page reload required - translations update instantly
+
+### Translation Format
+
+Translations use the `translate` pipe in templates:
+
+```html
+<!-- Using translate pipe -->
+<h1>{{ 'home.welcomeTitle' | translate }}</h1>
+<button>{{ 'common.cancel' | translate }}</button>
+```
+
+### Adding New Translations
+
+1. Add translations to the JSON files in `public/locale/`:
+   - `messages.en.json` - English translations
+   - `messages.ro.json` - Romanian translations
+
+2. Use the translation key in your template:
+```html
+<p>{{ 'your.new.key' | translate }}</p>
+```
+
+3. The translation will be loaded automatically when the language is selected
+
+### Translation Files Structure
+
+```json
+{
+  "locale": "en",
+  "translations": {
+    "app.title": "TODL Library",
+    "nav.books": "Books",
+    "common.cancel": "Cancel"
+  }
+}
+```
+
+### Adding New Languages
+
+To add a new language:
+
+1. Create a new translation file: `public/locale/messages.[lang].json`
+2. Add the language to `LanguageService` in `src/app/services/language.service.ts`:
+   - Add to `AVAILABLE_LANGUAGES` array
+   - Add language name to `getLanguageName()` method
+   - Add flag emoji to `getLanguageFlag()` method
+
+### Legacy Build-time i18n
+
+For backwards compatibility, the application still supports build-time i18n:
+
+```bash
+# Build for English (default)
+npm run build:en
+
+# Build for Romanian
+npm run build:ro
+
+# Build for all locales
+npm run build:all
+```
+
+However, **runtime language switching is now the recommended approach** as it provides a better user experience.
+
+Locale configuration is defined in `angular.json`:
+- Source locale: `en` (English)
+- Available translations: `ro` (Romanian)
 
 ## Build
 

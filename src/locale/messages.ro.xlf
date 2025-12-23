@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:xliff xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <ns0:file source-language="en" datatype="plaintext" original="ng2.template">
+    <ns0:body>
+      <ns0:trans-unit id="book.detailsTitle" datatype="html">
+        <ns0:source>Details</ns0:source>
+        <target>Detalii</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">17,18</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">24,25</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.birthDate" datatype="html">
+        <ns0:source>Birth Date:</ns0:source>
+        <target>Data nașterii</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">21,22</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">36,37</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">55</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.nationality" datatype="html">
+        <ns0:source>Nationality:</ns0:source>
+        <target>Naționalitate</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">27,28</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">31,32</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">52</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.biography" datatype="html">
+        <ns0:source>Biography</ns0:source>
+        <target>Biografie</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">36,37</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">43,44</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">58</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="authors.backToList" datatype="html">
+        <ns0:source>Back to List</ns0:source>
+        <target>Înapoi la listă</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">45,47</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="common.edit" datatype="html">
+        <ns0:source>Edit</ns0:source>
+        <target>Editare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">50,52</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">45,47</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">72,74</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">53,55</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">13,15</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collections-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">42,44</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="common.delete" datatype="html">
+        <ns0:source>Delete</ns0:source>
+        <target>Ștergere</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">54,56</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">49,50</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">76,78</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">57,58</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.editTitle" datatype="html">
+        <ns0:source>Edit Author</ns0:source>
+        <target>Editare Autor</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,8</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.addTitle" datatype="html">
+        <ns0:source>Add New Author</ns0:source>
+        <target>Adăugare Autor Nou</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">8,10</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.name" datatype="html">
+        <ns0:source>Name</ns0:source>
+        <target>Nume</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">23,24</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">50</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.nameRequired" datatype="html">
+        <ns0:source>Name is required</ns0:source>
+        <target>Numele este obligatoriu</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">26,28</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="common.cancel" datatype="html">
+        <ns0:source>Cancel</ns0:source>
+        <target>Anulare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">48,49</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">65,66</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">36,37</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.updateButton" datatype="html">
+        <ns0:source>Update Author</ns0:source>
+        <target>Actualizare Autor</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">51,53</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.createButton" datatype="html">
+        <ns0:source>Create Author</ns0:source>
+        <target>Creare Autor</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/author-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">53,55</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="authors.listTitle" datatype="html">
+        <ns0:source>Authors</ns0:source>
+        <target>Autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">3,4</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="authors.addButton" datatype="html">
+        <ns0:source>Add Author</ns0:source>
+        <target>Adăugare Autor</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,10</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="authors.noAuthorsFound" datatype="html">
+        <ns0:source>No authors found</ns0:source>
+        <target>Nu s-au găsit autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">17,18</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">69,71</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="authors.addFirstAuthor" datatype="html">
+        <ns0:source>Add Your First Author</ns0:source>
+        <target>Adăugați primul autor</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">18,21</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="author.born" datatype="html">
+        <ns0:source>Born:</ns0:source>
+        <target>Născut:</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">32</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">83</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="common.view" datatype="html">
+        <ns0:source>View</ns0:source>
+        <target>Vezi</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/authors/authors-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">41,43</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">49,51</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">77,78</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collections-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">38,40</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="books.by" datatype="html">
+        <ns0:source>by</ns0:source>
+        <target>de</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">11</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">28</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">62</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">37</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.descriptionTitle" datatype="html">
+        <ns0:source>Description</ns0:source>
+        <target>Descriere</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">18,19</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.isbn" datatype="html">
+        <ns0:source>ISBN:</ns0:source>
+        <target>ISBN</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">28,29</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">43,44</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">37</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">71</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">45</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.publishedDate" datatype="html">
+        <ns0:source>Published Date:</ns0:source>
+        <target>Data publicării</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">34,35</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">48,49</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.genre" datatype="html">
+        <ns0:source>Genre:</ns0:source>
+        <target>Gen</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">40,41</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">55,56</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">43</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">48</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.authorInfo" datatype="html">
+        <ns0:source>Author Information</ns0:source>
+        <target>Informații despre autor</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">49,50</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="books.backToList" datatype="html">
+        <ns0:source>Back to List</ns0:source>
+        <target>Înapoi la listă</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">67,69</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.editTitle" datatype="html">
+        <ns0:source>Edit Book</ns0:source>
+        <target>Editare Carte</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,8</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.addTitle" datatype="html">
+        <ns0:source>Add New Book</ns0:source>
+        <target>Adăugare Carte Nouă</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">8,10</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.title" datatype="html">
+        <ns0:source>Title</ns0:source>
+        <target>Titlu</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">23,24</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.titleRequired" datatype="html">
+        <ns0:source>Title is required</ns0:source>
+        <target>Titlul este obligatoriu</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">26,28</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.author" datatype="html">
+        <ns0:source>Author</ns0:source>
+        <target>Autor</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">31,32</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.authorRequired" datatype="html">
+        <ns0:source>Author is required</ns0:source>
+        <target>Autorul este obligatoriu</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">38,40</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.description" datatype="html">
+        <ns0:source>Description</ns0:source>
+        <target>Descriere</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">60,61</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.updateButton" datatype="html">
+        <ns0:source>Update Book</ns0:source>
+        <target>Actualizare Carte</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">68,70</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.createButton" datatype="html">
+        <ns0:source>Create Book</ns0:source>
+        <target>Creare Carte</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/book-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">70,72</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="books.listTitle" datatype="html">
+        <ns0:source>Books</ns0:source>
+        <target>Cărți</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">3,4</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="books.addButton" datatype="html">
+        <ns0:source>Add Book</ns0:source>
+        <target>Adăugare Carte</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,10</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="books.noBooksFound" datatype="html">
+        <ns0:source>No books found</ns0:source>
+        <target>Nu s-au găsit cărți</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">17,18</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">28,30</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="books.addFirstBook" datatype="html">
+        <ns0:source>Add Your First Book</ns0:source>
+        <target>Adăugați prima carte</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">18,21</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="book.published" datatype="html">
+        <ns0:source>Published:</ns0:source>
+        <target>Publicat:</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/books/books-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">40</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collections.backToList" datatype="html">
+        <ns0:source>Back to Collections</ns0:source>
+        <target>Înapoi la colecții</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">17,19</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.created" datatype="html">
+        <ns0:source>Created:</ns0:source>
+        <target>Creat:</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">28</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.updated" datatype="html">
+        <ns0:source>Updated:</ns0:source>
+        <target>Actualizat:</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">31</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.booksInCollection" datatype="html">
+        <ns0:source>Books in this Collection</ns0:source>
+        <target>Cărți în această colecție</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">37,39</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.addBook" datatype="html">
+        <ns0:source>Add a book</ns0:source>
+        <target>Adăugați o carte</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">41,42</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collections.addBookButton" datatype="html">
+        <ns0:source>Add Book</ns0:source>
+        <target>Adăugare Carte</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">50,52</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.removeBook" datatype="html">
+        <ns0:source>Remove</ns0:source>
+        <target>Eliminare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">81,83</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.noBooksYet" datatype="html">
+        <ns0:source>No books in this collection yet</ns0:source>
+        <target>Încă nu există cărți în această colecție</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</ns0:context>
+          <ns0:context context-type="linenumber">90,93</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.editTitle" datatype="html">
+        <ns0:source>Edit Collection</ns0:source>
+        <target>Editare Colecție</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,8</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.addTitle" datatype="html">
+        <ns0:source>Add New Collection</ns0:source>
+        <target>Adăugare Colecție Nouă</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">8,10</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.name" datatype="html">
+        <ns0:source>Name</ns0:source>
+        <target>Nume</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">23,24</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.nameRequired" datatype="html">
+        <ns0:source>Name is required</ns0:source>
+        <target>Numele este obligatoriu</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">26,28</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collection.description" datatype="html">
+        <ns0:source>Description</ns0:source>
+        <target>Descriere</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">31,32</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="common.update" datatype="html">
+        <ns0:source>Update</ns0:source>
+        <target>Actualizare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">39,40</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="common.create" datatype="html">
+        <ns0:source>Create</ns0:source>
+        <target>Creare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collection-form.component.html</ns0:context>
+          <ns0:context context-type="linenumber">41,43</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collections.listTitle" datatype="html">
+        <ns0:source>Collections</ns0:source>
+        <target>Colecții</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collections-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">3,4</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collections.addButton" datatype="html">
+        <ns0:source>Add Collection</ns0:source>
+        <target>Adăugare Colecție</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collections-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,10</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collections.noCollectionsFound" datatype="html">
+        <ns0:source>No collections found</ns0:source>
+        <target>Nu s-au găsit colecții</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collections-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">17,18</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collections.addFirstCollection" datatype="html">
+        <ns0:source>Add Your First Collection</ns0:source>
+        <target>Adăugați prima colecție</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collections-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">18,21</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="collections.books" datatype="html">
+        <ns0:source>Books:</ns0:source>
+        <target>Cărți:</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/collections/collections-list.component.html</ns0:context>
+          <ns0:context context-type="linenumber">32</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.welcomeTitle" datatype="html">
+        <ns0:source>Welcome to TODL Library</ns0:source>
+        <target>Bun venit la Biblioteca TODL</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">4,5</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">71,72</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.hello" datatype="html">
+        <ns0:source>Hello, <ns0:x id="INTERPOLATION" equiv-text="{{ user.name }}" />!</ns0:source>
+        <target>Bună, </target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,8</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.subtitle" datatype="html">
+        <ns0:source>Manage your book collection and discover new authors.</ns0:source>
+        <target>Gestionați colecția dvs. de cărți și descoperiți autori noi.</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">8,11</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.booksTitle" datatype="html">
+        <ns0:source>Books</ns0:source>
+        <target>Cărți</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">15,16</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.booksSubtitle" datatype="html">
+        <ns0:source>Manage your book collection</ns0:source>
+        <target>Gestionați colecția de cărți</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">16,17</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.booksDescription" datatype="html">
+        <ns0:source>Browse, create, edit, and delete books in your library. Keep track of all your favorite titles.</ns0:source>
+        <target>Navigați, creați, editați și ștergeți cărți din biblioteca dvs. Țineți evidența tuturor titlurilor preferate.</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">19,21</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.goToBooks" datatype="html">
+        <ns0:source>Go to Books</ns0:source>
+        <target>Mergi la Cărți</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">22,23</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.authorsTitle" datatype="html">
+        <ns0:source>Authors</ns0:source>
+        <target>Autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">29,30</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.authorsSubtitle" datatype="html">
+        <ns0:source>Manage author information</ns0:source>
+        <target>Gestionați informațiile despre autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">30,31</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.authorsDescription" datatype="html">
+        <ns0:source>Add and manage information about your favorite authors. Track their biographies and works.</ns0:source>
+        <target>Adăugați și gestionați informații despre autorii preferați. Urmăriți biografiile și operele lor.</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">33,35</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.goToAuthors" datatype="html">
+        <ns0:source>Go to Authors</ns0:source>
+        <target>Mergi la Autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">36,37</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.collectionsTitle" datatype="html">
+        <ns0:source>Collections</ns0:source>
+        <target>Colecții</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">43,44</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.collectionsSubtitle" datatype="html">
+        <ns0:source>Organize books into collections</ns0:source>
+        <target>Organizați cărțile în colecții</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">44,45</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.collectionsDescription" datatype="html">
+        <ns0:source>Create custom collections and organize your books into meaningful groups.</ns0:source>
+        <target>Creați colecții personalizate și organizați cărțile în grupuri semnificative.</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">47,49</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.goToCollections" datatype="html">
+        <ns0:source>Go to Collections</ns0:source>
+        <target>Mergi la Colecții</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">50,52</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.searchTitle" datatype="html">
+        <ns0:source>Search</ns0:source>
+        <target>Căutare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">57,58</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.searchSubtitle" datatype="html">
+        <ns0:source>Find books and authors</ns0:source>
+        <target>Găsiți cărți și autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">58,59</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.searchDescription" datatype="html">
+        <ns0:source>Quickly search through your entire library to find the books and authors you're looking for.</ns0:source>
+        <target>Căutați rapid în întreaga bibliotecă pentru a găsi cărțile și autorii pe care îi căutați.</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">61,63</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.goToSearch" datatype="html">
+        <ns0:source>Go to Search</ns0:source>
+        <target>Mergi la Căutare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">64,65</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.loginSubtitle" datatype="html">
+        <ns0:source>Your personal book management system</ns0:source>
+        <target>Sistemul dvs. personal de gestionare a cărților</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">72,73</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.loginMessage" datatype="html">
+        <ns0:source>Please log in to access your library and manage your books and authors.</ns0:source>
+        <target>Vă rugăm să vă conectați pentru a accesa biblioteca și a gestiona cărțile și autorii.</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">73,74</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="home.loginButton" datatype="html">
+        <ns0:source>Log In</ns0:source>
+        <target>Conectare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/home/home.component.html</ns0:context>
+          <ns0:context context-type="linenumber">76,78</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="app.title" datatype="html">
+        <ns0:source>TODL Library</ns0:source>
+        <target>Biblioteca TODL</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/navigation/navigation.component.html</ns0:context>
+          <ns0:context context-type="linenumber">2,3</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="nav.books" datatype="html">
+        <ns0:source>Books</ns0:source>
+        <target>Cărți</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/navigation/navigation.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,7</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="nav.authors" datatype="html">
+        <ns0:source>Authors</ns0:source>
+        <target>Autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/navigation/navigation.component.html</ns0:context>
+          <ns0:context context-type="linenumber">7,8</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="nav.collections" datatype="html">
+        <ns0:source>Collections</ns0:source>
+        <target>Colecții</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/navigation/navigation.component.html</ns0:context>
+          <ns0:context context-type="linenumber">8,9</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="nav.search" datatype="html">
+        <ns0:source>Search</ns0:source>
+        <target>Căutare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/navigation/navigation.component.html</ns0:context>
+          <ns0:context context-type="linenumber">9,11</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="nav.logout" datatype="html">
+        <ns0:source>Logout</ns0:source>
+        <target>Deconectare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/navigation/navigation.component.html</ns0:context>
+          <ns0:context context-type="linenumber">20,22</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="nav.login" datatype="html">
+        <ns0:source>Login</ns0:source>
+        <target>Conectare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/navigation/navigation.component.html</ns0:context>
+          <ns0:context context-type="linenumber">26,28</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="search.title" datatype="html">
+        <ns0:source>Search</ns0:source>
+        <target>Căutare</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">2,4</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="search.searchLabel" datatype="html">
+        <ns0:source>Search books and authors</ns0:source>
+        <target>Căutați cărți și autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">6,7</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="search.placeholder" datatype="html">
+        <ns0:source>Enter search term...</ns0:source>
+        <target>Introduceți termenul de căutare...</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">7,8</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="search.booksTab" datatype="html">
+        <ns0:source>Books (<ns0:x id="INTERPOLATION" equiv-text="{{ books().length }}" />)</ns0:source>
+        <target>Cărți</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">23,24</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="search.viewDetails" datatype="html">
+        <ns0:source>View Details</ns0:source>
+        <target>Vezi detalii</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">54,56</ns0:context>
+        </ns0:context-group>
+        <ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">92,94</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="search.authorsTab" datatype="html">
+        <ns0:source>Authors (<ns0:x id="INTERPOLATION" equiv-text="{{ authors().length }}" />)</ns0:source>
+        <target>Autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">64,65</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="search.enterSearchTerm" datatype="html">
+        <ns0:source>Enter a search term to find books and authors</ns0:source>
+        <target>Introduceți un termen de căutare pentru a găsi cărți și autori</target><ns0:context-group purpose="location">
+          <ns0:context context-type="sourcefile">src/app/components/search/search.component.html</ns0:context>
+          <ns0:context context-type="linenumber">105,109</ns0:context>
+        </ns0:context-group>
+      </ns0:trans-unit>
+    </ns0:body>
+  </ns0:file>
+</ns0:xliff>

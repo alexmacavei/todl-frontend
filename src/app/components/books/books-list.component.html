@@ -1,9 +1,9 @@
 <div class="books-container">
   <div class="header">
-    <h1>Books</h1>
+    <h1 i18n="@@books.listTitle">Books</h1>
     <a mat-raised-button color="primary" routerLink="/books/new">
       <mat-icon>add</mat-icon>
-      Add Book
+      <span i18n="@@books.addButton">Add Book</span>
     </a>
   </div>
 
@@ -14,8 +14,8 @@
   } @else if (books().length === 0) {
     <div class="empty-state">
       <mat-icon>library_books</mat-icon>
-      <p>No books found</p>
-      <a mat-raised-button color="primary" routerLink="/books/new">Add Your First Book</a>
+      <p i18n="@@books.noBooksFound">No books found</p>
+      <a mat-raised-button color="primary" routerLink="/books/new" i18n="@@books.addFirstBook">Add Your First Book</a>
     </div>
   } @else {
     <div class="books-grid">
@@ -25,7 +25,7 @@
             <mat-card-title>{{ book.title }}</mat-card-title>
             <mat-card-subtitle>
               @if (book.author) {
-                by {{ book.author.name }}
+                <span i18n="@@books.by">by</span> {{ book.author.name }}
               }
             </mat-card-subtitle>
           </mat-card-header>
@@ -34,27 +34,27 @@
               <p class="description">{{ book.description }}</p>
             }
             @if (book.isbn) {
-              <p class="isbn"><strong>ISBN:</strong> {{ book.isbn }}</p>
+              <p class="isbn"><strong i18n="@@book.isbn">ISBN:</strong> {{ book.isbn }}</p>
             }
             @if (book.publishedDate) {
-              <p class="date"><strong>Published:</strong> {{ book.publishedDate | date }}</p>
+              <p class="date"><strong i18n="@@book.published">Published:</strong> {{ book.publishedDate | date }}</p>
             }
             @if (book.genre) {
-              <p class="genre"><strong>Genre:</strong> {{ book.genre }}</p>
+              <p class="genre"><strong i18n="@@book.genre">Genre:</strong> {{ book.genre }}</p>
             }
           </mat-card-content>
           <mat-card-actions>
             <a mat-button [routerLink]="['/books', book.id]">
               <mat-icon>visibility</mat-icon>
-              View
+              <span i18n="@@common.view">View</span>
             </a>
             <a mat-button [routerLink]="['/books', book.id, 'edit']">
               <mat-icon>edit</mat-icon>
-              Edit
+              <span i18n="@@common.edit">Edit</span>
             </a>
             <button mat-button color="warn" (click)="deleteBook(book.id!)">
               <mat-icon>delete</mat-icon>
-              Delete
+              <span i18n="@@common.delete">Delete</span>
             </button>
           </mat-card-actions>
         </mat-card>

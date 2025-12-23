@@ -1,7 +1,13 @@
 <div class="form-container">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>{{ isEditMode() ? 'Edit Collection' : 'Add New Collection' }}</mat-card-title>
+      <mat-card-title>
+        @if (isEditMode()) {
+          <span i18n="@@collection.editTitle">Edit Collection</span>
+        } @else {
+          <span i18n="@@collection.addTitle">Add New Collection</span>
+        }
+      </mat-card-title>
     </mat-card-header>
     
     @if (loading()) {
@@ -14,22 +20,26 @@
       <mat-card-content>
         <form (ngSubmit)="onSubmit()">
           <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
+            <mat-label i18n="@@collection.name">Name</mat-label>
             <input matInput [field]="collectionForm.name">
             @if (collectionForm.name().touched() && !collectionForm.name().valid()) {
-              <mat-error>Name is required</mat-error>
+              <mat-error i18n="@@collection.nameRequired">Name is required</mat-error>
             }
           </mat-form-field>
 
           <mat-form-field appearance="fill">
-            <mat-label>Description</mat-label>
+            <mat-label i18n="@@collection.description">Description</mat-label>
             <textarea matInput [field]="collectionForm.description" rows="4"></textarea>
           </mat-form-field>
 
           <div class="form-actions">
-            <button mat-raised-button type="button" (click)="onCancel()">Cancel</button>
+            <button mat-raised-button type="button" (click)="onCancel()" i18n="@@common.cancel">Cancel</button>
             <button mat-raised-button color="primary" type="submit" [disabled]="!collectionForm().valid()">
-              {{ isEditMode() ? 'Update' : 'Create' }}
+              @if (isEditMode()) {
+                <span i18n="@@common.update">Update</span>
+              } @else {
+                <span i18n="@@common.create">Create</span>
+              }
             </button>
           </div>
         </form>

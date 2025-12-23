@@ -1,79 +1,79 @@
 <div class="home-container">
   @if (auth.isAuthenticated$ | async) {
     <div class="welcome-section">
-      <h1>Welcome to TODL Library</h1>
+      <h1>{{ 'home.welcomeTitle' | translate }}</h1>
       @if (auth.user$ | async; as user) {
-        <p class="subtitle">Hello, {{ user.name }}!</p>
+        <p class="subtitle">{{ 'home.hello' | translate }}{{ user.name }}!</p>
       }
-      <p>Manage your book collection and discover new authors.</p>
+      <p>{{ 'home.subtitle' | translate }}</p>
     </div>
 
     <div class="features-grid">
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>library_books</mat-icon>
-          <mat-card-title>Books</mat-card-title>
-          <mat-card-subtitle>Manage your book collection</mat-card-subtitle>
+          <mat-card-title>{{ 'home.booksTitle' | translate }}</mat-card-title>
+          <mat-card-subtitle>{{ 'home.booksSubtitle' | translate }}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <p>Browse, create, edit, and delete books in your library. Keep track of all your favorite titles.</p>
+          <p>{{ 'home.booksDescription' | translate }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-raised-button color="primary" routerLink="/books">Go to Books</a>
+          <a mat-raised-button color="primary" routerLink="/books">{{ 'home.goToBooks' | translate }}</a>
         </mat-card-actions>
       </mat-card>
 
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>person</mat-icon>
-          <mat-card-title>Authors</mat-card-title>
-          <mat-card-subtitle>Manage author information</mat-card-subtitle>
+          <mat-card-title>{{ 'home.authorsTitle' | translate }}</mat-card-title>
+          <mat-card-subtitle>{{ 'home.authorsSubtitle' | translate }}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <p>Add and manage information about your favorite authors. Track their biographies and works.</p>
+          <p>{{ 'home.authorsDescription' | translate }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-raised-button color="primary" routerLink="/authors">Go to Authors</a>
+          <a mat-raised-button color="primary" routerLink="/authors">{{ 'home.goToAuthors' | translate }}</a>
         </mat-card-actions>
       </mat-card>
 
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>collections_bookmark</mat-icon>
-          <mat-card-title>Collections</mat-card-title>
-          <mat-card-subtitle>Organize books into collections</mat-card-subtitle>
+          <mat-card-title>{{ 'home.collectionsTitle' | translate }}</mat-card-title>
+          <mat-card-subtitle>{{ 'home.collectionsSubtitle' | translate }}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <p>Create custom collections and organize your books into meaningful groups.</p>
+          <p>{{ 'home.collectionsDescription' | translate }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-raised-button color="primary" routerLink="/collections">Go to Collections</a>
+          <a mat-raised-button color="primary" routerLink="/collections">{{ 'home.goToCollections' | translate }}</a>
         </mat-card-actions>
       </mat-card>
 
       <mat-card>
         <mat-card-header>
           <mat-icon mat-card-avatar>search</mat-icon>
-          <mat-card-title>Search</mat-card-title>
-          <mat-card-subtitle>Find books and authors</mat-card-subtitle>
+          <mat-card-title>{{ 'home.searchTitle' | translate }}</mat-card-title>
+          <mat-card-subtitle>{{ 'home.searchSubtitle' | translate }}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <p>Quickly search through your entire library to find the books and authors you're looking for.</p>
+          <p>{{ 'home.searchDescription' | translate }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a mat-raised-button color="primary" routerLink="/search">Go to Search</a>
+          <a mat-raised-button color="primary" routerLink="/search">{{ 'home.goToSearch' | translate }}</a>
         </mat-card-actions>
       </mat-card>
     </div>
   } @else {
     <div class="login-section">
       <mat-icon class="large-icon">library_books</mat-icon>
-      <h1>Welcome to TODL Library</h1>
-      <p class="subtitle">Your personal book management system</p>
-      <p>Please log in to access your library and manage your books and authors.</p>
+      <h1>{{ 'home.welcomeTitle' | translate }}</h1>
+      <p class="subtitle">{{ 'home.loginSubtitle' | translate }}</p>
+      <p>{{ 'home.loginMessage' | translate }}</p>
       <button mat-raised-button color="primary" (click)="login()">
         <mat-icon>login</mat-icon>
-        Log In
+        <span>{{ 'home.loginButton' | translate }}</span>
       </button>
     </div>
   }

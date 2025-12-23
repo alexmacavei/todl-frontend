@@ -1,9 +1,9 @@
 <div class="collections-container">
   <div class="header">
-    <h1>Collections</h1>
+    <h1 i18n="@@collections.listTitle">Collections</h1>
     <a mat-raised-button color="primary" routerLink="/collections/new">
       <mat-icon>add</mat-icon>
-      Add Collection
+      <span i18n="@@collections.addButton">Add Collection</span>
     </a>
   </div>
 
@@ -14,8 +14,8 @@
   } @else if (collections().length === 0) {
     <div class="empty-state">
       <mat-icon>collections_bookmark</mat-icon>
-      <p>No collections found</p>
-      <a mat-raised-button color="primary" routerLink="/collections/new">Add Your First Collection</a>
+      <p i18n="@@collections.noCollectionsFound">No collections found</p>
+      <a mat-raised-button color="primary" routerLink="/collections/new" i18n="@@collections.addFirstCollection">Add Your First Collection</a>
     </div>
   } @else {
     <div class="collections-grid">
@@ -29,17 +29,17 @@
               <p class="description">{{ collection.description }}</p>
             }
             @if (collection.books) {
-              <p class="book-count"><strong>Books:</strong> {{ collection.books.length }}</p>
+              <p class="book-count"><strong i18n="@@collections.books">Books:</strong> {{ collection.books.length }}</p>
             }
           </mat-card-content>
           <mat-card-actions>
             <a mat-button [routerLink]="['/collections', collection.id]">
               <mat-icon>visibility</mat-icon>
-              View
+              <span i18n="@@common.view">View</span>
             </a>
             <a mat-button [routerLink]="['/collections', collection.id, 'edit']">
               <mat-icon>edit</mat-icon>
-              Edit
+              <span i18n="@@common.edit">Edit</span>
             </a>
           </mat-card-actions>
         </mat-card>

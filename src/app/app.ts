@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,6 @@ import { NavigationComponent } from './components/navigation/navigation.componen
   styleUrl: './app.scss'
 })
 export class App {
+  // Initialize language service to set up translations
+  private languageService = inject(LanguageService);
 }
