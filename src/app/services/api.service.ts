@@ -83,7 +83,7 @@ export class ApiService {
     return this.http.post<Collection>(`${this.apiUrl}/collections`, collection);
   }
 
-  updateCollection(id: number, collection: Partial<Collection>): Observable<Collection> {
+  updateCollection(id: number, collection: Collection): Observable<Collection> {
     return this.http.patch<Collection>(`${this.apiUrl}/collections/${id}`, collection);
   }
 
