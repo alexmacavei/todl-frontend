@@ -10,11 +10,11 @@
         <div class="actions">
           <a mat-raised-button [routerLink]="['/collections', collection()!.id, 'edit']">
             <mat-icon>edit</mat-icon>
-            Edit
+            <span i18n="@@common.edit">Edit</span>
           </a>
           <a mat-raised-button routerLink="/collections">
             <mat-icon>arrow_back</mat-icon>
-            Back to Collections
+            <span i18n="@@collections.backToList">Back to Collections</span>
           </a>
         </div>
       </div>
@@ -25,20 +25,20 @@
             <p class="description">{{ collection()!.description }}</p>
           }
           @if (collection()!.createdAt) {
-            <p class="meta"><strong>Created:</strong> {{ collection()!.createdAt | date }}</p>
+            <p class="meta"><strong i18n="@@collection.created">Created:</strong> {{ collection()!.createdAt | date }}</p>
           }
           @if (collection()!.updatedAt) {
-            <p class="meta"><strong>Updated:</strong> {{ collection()!.updatedAt | date }}</p>
+            <p class="meta"><strong i18n="@@collection.updated">Updated:</strong> {{ collection()!.updatedAt | date }}</p>
           }
         </mat-card-content>
       </mat-card>
 
       <div class="books-section">
-        <h2>Books in this Collection</h2>
+        <h2 i18n="@@collection.booksInCollection">Books in this Collection</h2>
         
         <div class="add-book-section">
           <mat-form-field appearance="fill">
-            <mat-label>Add a book</mat-label>
+            <mat-label i18n="@@collection.addBook">Add a book</mat-label>
             <mat-select [(ngModel)]="selectedBookId">
               @for (book of getAvailableBooksToAdd(); track book.id) {
                 <mat-option [value]="book.id">{{ book.title }}</mat-option>
@@ -47,7 +47,7 @@
           </mat-form-field>
           <button mat-raised-button color="primary" (click)="addBook()" [disabled]="!selectedBookId || loadingBooks()">
             <mat-icon>add</mat-icon>
-            Add Book
+            <span i18n="@@collections.addBookButton">Add Book</span>
           </button>
         </div>
 
@@ -59,7 +59,7 @@
                   <mat-card-title>{{ book.title }}</mat-card-title>
                   <mat-card-subtitle>
                     @if (book.author) {
-                      by {{ book.author.name }}
+                      <span i18n="@@books.by">by</span> {{ book.author.name }}
                     }
                   </mat-card-subtitle>
                 </mat-card-header>
@@ -68,17 +68,17 @@
                     <p class="book-description">{{ book.description }}</p>
                   }
                   @if (book.isbn) {
-                    <p class="isbn"><strong>ISBN:</strong> {{ book.isbn }}</p>
+                    <p class="isbn"><strong i18n="@@book.isbn">ISBN:</strong> {{ book.isbn }}</p>
                   }
                 </mat-card-content>
                 <mat-card-actions>
                   <a mat-button [routerLink]="['/books', book.id]">
                     <mat-icon>visibility</mat-icon>
-                    View
+                    <span i18n="@@common.view">View</span>
                   </a>
                   <button mat-button color="warn" (click)="removeBook(book.id!)">
                     <mat-icon>remove_circle</mat-icon>
-                    Remove
+                    <span i18n="@@collection.removeBook">Remove</span>
                   </button>
                 </mat-card-actions>
               </mat-card>
@@ -87,7 +87,7 @@
         } @else {
           <div class="empty-books">
             <mat-icon>library_books</mat-icon>
-            <p>No books in this collection yet</p>
+            <p i18n="@@collection.noBooksYet">No books in this collection yet</p>
           </div>
         }
       </div>

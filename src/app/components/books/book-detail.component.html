@@ -8,36 +8,36 @@
       <mat-card-header>
         <mat-card-title>{{ book()!.title }}</mat-card-title>
         @if (book()!.author) {
-          <mat-card-subtitle>by {{ book()!.author!.name }}</mat-card-subtitle>
+          <mat-card-subtitle><span i18n="@@books.by">by</span> {{ book()!.author!.name }}</mat-card-subtitle>
         }
       </mat-card-header>
 
       <mat-card-content>
         @if (book()!.description) {
           <div class="section">
-            <h3>Description</h3>
+            <h3 i18n="@@book.descriptionTitle">Description</h3>
             <p>{{ book()!.description }}</p>
           </div>
         }
 
         <div class="section">
-          <h3>Details</h3>
+          <h3 i18n="@@book.detailsTitle">Details</h3>
           <div class="details-grid">
             @if (book()!.isbn) {
               <div class="detail-item">
-                <strong>ISBN:</strong>
+                <strong i18n="@@book.isbn">ISBN:</strong>
                 <span>{{ book()!.isbn }}</span>
               </div>
             }
             @if (book()!.publishedDate) {
               <div class="detail-item">
-                <strong>Published Date:</strong>
+                <strong i18n="@@book.publishedDate">Published Date:</strong>
                 <span>{{ book()!.publishedDate | date }}</span>
               </div>
             }
             @if (book()!.genre) {
               <div class="detail-item">
-                <strong>Genre:</strong>
+                <strong i18n="@@book.genre">Genre:</strong>
                 <span>{{ book()!.genre }}</span>
               </div>
             }
@@ -46,16 +46,16 @@
 
         @if (book()!.author) {
           <div class="section">
-            <h3>Author Information</h3>
-            <p><strong>Name:</strong> {{ book()!.author!.name }}</p>
+            <h3 i18n="@@book.authorInfo">Author Information</h3>
+            <p><strong i18n="@@author.name">Name:</strong> {{ book()!.author!.name }}</p>
             @if (book()!.author!.nationality) {
-              <p><strong>Nationality:</strong> {{ book()!.author!.nationality }}</p>
+              <p><strong i18n="@@author.nationality">Nationality:</strong> {{ book()!.author!.nationality }}</p>
             }
             @if (book()!.author!.birthDate) {
-              <p><strong>Birth Date:</strong> {{ book()!.author!.birthDate | date }}</p>
+              <p><strong i18n="@@author.birthDate">Birth Date:</strong> {{ book()!.author!.birthDate | date }}</p>
             }
             @if (book()!.author!.biography) {
-              <p><strong>Biography:</strong> {{ book()!.author!.biography }}</p>
+              <p><strong i18n="@@author.biography">Biography:</strong> {{ book()!.author!.biography }}</p>
             }
           </div>
         }
@@ -64,16 +64,16 @@
       <mat-card-actions>
         <button mat-button routerLink="/books">
           <mat-icon>arrow_back</mat-icon>
-          Back to List
+          <span i18n="@@books.backToList">Back to List</span>
         </button>
         <div class="spacer"></div>
         <a mat-raised-button color="primary" [routerLink]="['/books', book()!.id, 'edit']">
           <mat-icon>edit</mat-icon>
-          Edit
+          <span i18n="@@common.edit">Edit</span>
         </a>
         <button mat-raised-button color="warn" (click)="deleteBook()">
           <mat-icon>delete</mat-icon>
-          Delete
+          <span i18n="@@common.delete">Delete</span>
         </button>
       </mat-card-actions>
     </mat-card>

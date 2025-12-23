@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
-  <span class="toolbar-title">TODL Library</span>
+  <span class="toolbar-title" i18n="@@app.title">TODL Library</span>
   <span class="spacer"></span>
   
   @if (auth.isAuthenticated$ | async) {
-    <a mat-button routerLink="/books" routerLinkActive="active">Books</a>
-    <a mat-button routerLink="/authors" routerLinkActive="active">Authors</a>
-    <a mat-button routerLink="/collections" routerLinkActive="active">Collections</a>
-    <a mat-button routerLink="/search" routerLinkActive="active">Search</a>
+    <a mat-button routerLink="/books" routerLinkActive="active" i18n="@@nav.books">Books</a>
+    <a mat-button routerLink="/authors" routerLinkActive="active" i18n="@@nav.authors">Authors</a>
+    <a mat-button routerLink="/collections" routerLinkActive="active" i18n="@@nav.collections">Collections</a>
+    <a mat-button routerLink="/search" routerLinkActive="active" i18n="@@nav.search">Search</a>
     
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>account_circle</mat-icon>
@@ -17,13 +17,13 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>
-        Logout
+        <span i18n="@@nav.logout">Logout</span>
       </button>
     </mat-menu>
   } @else {
     <button mat-button (click)="login()">
       <mat-icon>login</mat-icon>
-      Login
+      <span i18n="@@nav.login">Login</span>
     </button>
   }
 </mat-toolbar>

@@ -1,10 +1,10 @@
 <div class="search-container">
-  <h1>Search</h1>
+  <h1 i18n="@@search.title">Search</h1>
 
   <div class="search-box">
     <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Search books and authors</mat-label>
-      <input matInput [formControl]="searchControl" placeholder="Enter search term...">
+      <mat-label i18n="@@search.searchLabel">Search books and authors</mat-label>
+      <input matInput [formControl]="searchControl" i18n-placeholder="@@search.placeholder" placeholder="Enter search term...">
       <mat-icon matPrefix>search</mat-icon>
       @if (searchControl.value) {
         <button mat-icon-button matSuffix (click)="clearSearch()">
@@ -20,12 +20,12 @@
     </div>
   } @else if (hasSearched()) {
     <mat-tab-group>
-      <mat-tab label="Books ({{ books().length }})">
+      <mat-tab i18n-label="@@search.booksTab" label="Books ({{ books().length }})">
         <div class="tab-content">
           @if (books().length === 0) {
             <div class="empty-state">
               <mat-icon>library_books</mat-icon>
-              <p>No books found</p>
+              <p i18n="@@books.noBooksFound">No books found</p>
             </div>
           } @else {
             <div class="results-grid">
@@ -34,7 +34,7 @@
                   <mat-card-header>
                     <mat-card-title>{{ book.title }}</mat-card-title>
                     @if (book.author) {
-                      <mat-card-subtitle>by {{ book.author.name }}</mat-card-subtitle>
+                      <mat-card-subtitle><span i18n="@@books.by">by</span> {{ book.author.name }}</mat-card-subtitle>
                     }
                   </mat-card-header>
                   <mat-card-content>
@@ -42,16 +42,16 @@
                       <p class="description">{{ book.description }}</p>
                     }
                     @if (book.isbn) {
-                      <p class="detail"><strong>ISBN:</strong> {{ book.isbn }}</p>
+                      <p class="detail"><strong i18n="@@book.isbn">ISBN:</strong> {{ book.isbn }}</p>
                     }
                     @if (book.genre) {
-                      <p class="detail"><strong>Genre:</strong> {{ book.genre }}</p>
+                      <p class="detail"><strong i18n="@@book.genre">Genre:</strong> {{ book.genre }}</p>
                     }
                   </mat-card-content>
                   <mat-card-actions>
                     <a mat-button [routerLink]="['/books', book.id]">
                       <mat-icon>visibility</mat-icon>
-                      View Details
+                      <span i18n="@@search.viewDetails">View Details</span>
                     </a>
                   </mat-card-actions>
                 </mat-card>
@@ -61,12 +61,12 @@
         </div>
       </mat-tab>
 
-      <mat-tab label="Authors ({{ authors().length }})">
+      <mat-tab i18n-label="@@search.authorsTab" label="Authors ({{ authors().length }})">
         <div class="tab-content">
           @if (authors().length === 0) {
             <div class="empty-state">
               <mat-icon>person</mat-icon>
-              <p>No authors found</p>
+              <p i18n="@@authors.noAuthorsFound">No authors found</p>
             </div>
           } @else {
             <div class="results-grid">
@@ -80,7 +80,7 @@
                   </mat-card-header>
                   <mat-card-content>
                     @if (author.birthDate) {
-                      <p class="detail"><strong>Born:</strong> {{ author.birthDate | date }}</p>
+                      <p class="detail"><strong i18n="@@author.born">Born:</strong> {{ author.birthDate | date }}</p>
                     }
                     @if (author.biography) {
                       <p class="biography">{{ author.biography }}</p>
@@ -89,7 +89,7 @@
                   <mat-card-actions>
                     <a mat-button [routerLink]="['/authors', author.id]">
                       <mat-icon>visibility</mat-icon>
-                      View Details
+                      <span i18n="@@search.viewDetails">View Details</span>
                     </a>
                   </mat-card-actions>
                 </mat-card>
@@ -102,7 +102,7 @@
   } @else {
     <div class="empty-state">
       <mat-icon>search</mat-icon>
-      <p>Enter a search term to find books and authors</p>
+      <p i18n="@@search.enterSearchTerm">Enter a search term to find books and authors</p>
     </div>
   }
 </div>
