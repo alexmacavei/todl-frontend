@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,23 +26,19 @@ import { ApiService } from '../../services/api.service';
   styleUrl: './collection-form.component.scss'
 })
 export class CollectionFormComponent implements OnInit {
-  private fb = inject(FormBuilder);
   private apiService = inject(ApiService);
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private snackBar = inject(MatSnackBar);
 
-  collectionForm: FormGroup;
+  collectionForm = new FormGroup({
+    name: new FormControl('', { validators: [Validators.required] }),
+    description: new FormControl('')
+  });
+
   loading = signal(true);
   isEditMode = signal(false);
   collectionId: number | null = null;
-
-  constructor() {
-    this.collectionForm = this.fb.group({
-      name: ['', Validators.required],
-      description: ['']
-    });
-  }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -74,7 +70,10 @@ export class CollectionFormComponent implements OnInit {
 
   onSubmit(): void {
     if (this.collectionForm.valid) {
-      const collectionData = this.collectionForm.value;
+      const collectionData = {
+        name: this.collectionForm.value.name!,
+        description: this.collectionForm.value.description || undefined
+      };
       this.loading.set(true);
 
       const operation = this.isEditMode()
