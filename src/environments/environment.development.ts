@@ -7,7 +7,8 @@ export const environment = {
     domain: 'dev-sjyfsge8f4eop2kc.eu.auth0.com',
     clientId: 'ws3CbmeyQIeygFfQWNy6Q2MiZnswltA3',
     authorizationParams: {
-      redirect_uri: window.location.origin,
+      redirect_uri: window.location.origin
+      // Uncomment and set audience if your backend validates Auth0 tokens:
       // audience: 'http://localhost:3000'
     }
   }
