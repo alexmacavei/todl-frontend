@@ -80,7 +80,7 @@ export class CollectionFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.collectionForm.name().valid()) {
+    if (this.collectionForm().valid()) {
       const collectionData = this.collectionModel();
       this.loading.set(true);
 
