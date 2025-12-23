@@ -7,7 +7,9 @@ The frontend application for TODL - A comprehensive book and author management s
 - **Authentication**: Secure authentication using Auth0 by Okta
 - **Books Management**: Create, read, update, and delete books
 - **Authors Management**: Create, read, update, and delete authors
+- **Collections Management**: Create collections and organize books
 - **Search Functionality**: Search for books and authors across your library
+- **Internationalization**: Support for multiple languages (English and Romanian)
 - **Modern UI**: Built with Angular Material Design components
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
 
@@ -83,6 +85,63 @@ npm start
 ```
 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+### Development Server with Romanian Locale
+
+To run the development server with Romanian translations:
+```bash
+npm run start:ro
+```
+
+## Internationalization (i18n)
+
+The application supports multiple languages using Angular's built-in i18n features.
+
+### Available Languages
+
+- **English (en)** - Default language
+- **Romanian (ro)** - Romanian translation
+
+### Building for Specific Locales
+
+Build the application for a specific locale:
+
+```bash
+# Build for English (default)
+npm run build:en
+
+# Build for Romanian
+npm run build:ro
+
+# Build for all locales
+npm run build:all
+```
+
+The build artifacts will be stored in the `dist/todl-app` directory.
+
+### Adding New Translations
+
+1. Mark text for translation in templates using `i18n` attributes:
+```html
+<h1 i18n="@@unique.id">Text to translate</h1>
+```
+
+2. Extract messages to generate source translation file:
+```bash
+npm run extract-i18n
+```
+
+3. Update the translation files in `src/locale/`:
+   - `messages.xlf` - Source messages (English)
+   - `messages.ro.json` - Romanian translations
+
+4. Add new translations in the respective JSON file following the existing format
+
+### Locale Configuration
+
+Locale configuration is defined in `angular.json`:
+- Source locale: `en` (English)
+- Available translations: `ro` (Romanian)
 
 ## Build
 
