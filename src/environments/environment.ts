@@ -1,3 +1,5 @@
+// Production environment configuration
+// This is a template - update with your production settings
 export const environment = {
   production: true,
   apiUrl: 'https://api.yourdomain.com/api',

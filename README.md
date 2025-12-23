@@ -48,9 +48,11 @@ This project includes a comprehensive CI/CD pipeline using GitHub Actions:
 
 ### Test Environment
 
-The application is automatically deployed to **GitHub Pages** as a test environment when changes are pushed to the main branch. 
+The application is automatically deployed to **GitHub Pages** as a test environment when changes are pushed to the master branch. 
 
 **Test Environment URL**: `https://alexmacavei.github.io/todl-frontend/`
+
+For detailed information about GitHub Pages deployment and connecting with the backend, see [GITHUB_PAGES_DEPLOYMENT.md](GITHUB_PAGES_DEPLOYMENT.md).
 
 ### Build Artifacts
 
