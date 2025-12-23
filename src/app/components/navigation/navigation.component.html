@@ -5,6 +5,7 @@
   @if (auth.isAuthenticated$ | async) {
     <a mat-button routerLink="/books" routerLinkActive="active">Books</a>
     <a mat-button routerLink="/authors" routerLinkActive="active">Authors</a>
+    <a mat-button routerLink="/collections" routerLinkActive="active">Collections</a>
     <a mat-button routerLink="/search" routerLinkActive="active">Search</a>
     
     <button mat-button [matMenuTriggerFor]="menu">

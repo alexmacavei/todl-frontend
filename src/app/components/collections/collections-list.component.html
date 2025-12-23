@@ -1,0 +1,49 @@
+<div class="collections-container">
+  <div class="header">
+    <h1>Collections</h1>
+    <a mat-raised-button color="primary" routerLink="/collections/new">
+      <mat-icon>add</mat-icon>
+      Add Collection
+    </a>
+  </div>
+
+  @if (loading()) {
+    <div class="loading">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  } @else if (collections().length === 0) {
+    <div class="empty-state">
+      <mat-icon>collections_bookmark</mat-icon>
+      <p>No collections found</p>
+      <a mat-raised-button color="primary" routerLink="/collections/new">Add Your First Collection</a>
+    </div>
+  } @else {
+    <div class="collections-grid">
+      @for (collection of collections(); track collection.id) {
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{ collection.name }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            @if (collection.description) {
+              <p class="description">{{ collection.description }}</p>
+            }
+            @if (collection.books) {
+              <p class="book-count"><strong>Books:</strong> {{ collection.books.length }}</p>
+            }
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button [routerLink]="['/collections', collection.id]">
+              <mat-icon>visibility</mat-icon>
+              View
+            </a>
+            <a mat-button [routerLink]="['/collections', collection.id, 'edit']">
+              <mat-icon>edit</mat-icon>
+              Edit
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  }
+</div>

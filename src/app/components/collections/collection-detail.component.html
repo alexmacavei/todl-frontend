@@ -1,0 +1,96 @@
+<div class="detail-container">
+  @if (loading()) {
+    <div class="loading">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  } @else if (collection()) {
+    <div class="detail-content">
+      <div class="header">
+        <h1>{{ collection()!.name }}</h1>
+        <div class="actions">
+          <a mat-raised-button [routerLink]="['/collections', collection()!.id, 'edit']">
+            <mat-icon>edit</mat-icon>
+            Edit
+          </a>
+          <a mat-raised-button routerLink="/collections">
+            <mat-icon>arrow_back</mat-icon>
+            Back to Collections
+          </a>
+        </div>
+      </div>
+
+      <mat-card class="info-card">
+        <mat-card-content>
+          @if (collection()!.description) {
+            <p class="description">{{ collection()!.description }}</p>
+          }
+          @if (collection()!.createdAt) {
+            <p class="meta"><strong>Created:</strong> {{ collection()!.createdAt | date }}</p>
+          }
+          @if (collection()!.updatedAt) {
+            <p class="meta"><strong>Updated:</strong> {{ collection()!.updatedAt | date }}</p>
+          }
+        </mat-card-content>
+      </mat-card>
+
+      <div class="books-section">
+        <h2>Books in this Collection</h2>
+        
+        <div class="add-book-section">
+          <mat-form-field appearance="fill">
+            <mat-label>Add a book</mat-label>
+            <mat-select [(ngModel)]="selectedBookId">
+              @for (book of getAvailableBooksToAdd(); track book.id) {
+                <mat-option [value]="book.id">{{ book.title }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="addBook()" [disabled]="!selectedBookId || loadingBooks()">
+            <mat-icon>add</mat-icon>
+            Add Book
+          </button>
+        </div>
+
+        @if (collection()!.books && collection()!.books!.length > 0) {
+          <div class="books-grid">
+            @for (book of collection()!.books; track book.id) {
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>{{ book.title }}</mat-card-title>
+                  <mat-card-subtitle>
+                    @if (book.author) {
+                      by {{ book.author.name }}
+                    }
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                  @if (book.description) {
+                    <p class="book-description">{{ book.description }}</p>
+                  }
+                  @if (book.isbn) {
+                    <p class="isbn"><strong>ISBN:</strong> {{ book.isbn }}</p>
+                  }
+                </mat-card-content>
+                <mat-card-actions>
+                  <a mat-button [routerLink]="['/books', book.id]">
+                    <mat-icon>visibility</mat-icon>
+                    View
+                  </a>
+                  <button mat-button color="warn" (click)="removeBook(book.id!)">
+                    <mat-icon>remove_circle</mat-icon>
+                    Remove
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+            }
+          </div>
+        } @else {
+          <div class="empty-books">
+            <mat-icon>library_books</mat-icon>
+            <p>No books in this collection yet</p>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>
