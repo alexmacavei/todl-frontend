@@ -1,5 +1,9 @@
 # TODL Frontend
 
+[![CI/CD Pipeline](https://github.com/alexmacavei/todl-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/alexmacavei/todl-frontend/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/alexmacavei/todl-frontend/actions/workflows/codeql.yml/badge.svg)](https://github.com/alexmacavei/todl-frontend/actions/workflows/codeql.yml)
+[![Security Scan](https://github.com/alexmacavei/todl-frontend/actions/workflows/security.yml/badge.svg)](https://github.com/alexmacavei/todl-frontend/actions/workflows/security.yml)
+
 The frontend application for TODL - A comprehensive book and author management system built with Angular 21.
 
 ## Features
@@ -12,6 +16,53 @@ The frontend application for TODL - A comprehensive book and author management s
 - **Internationalization**: Support for multiple languages (English and Romanian)
 - **Modern UI**: Built with Angular Material Design components
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
+
+## CI/CD Pipeline
+
+This project includes a comprehensive CI/CD pipeline using GitHub Actions:
+
+### Automated Workflows
+
+1. **Main CI/CD Pipeline** (`ci.yml`)
+   - **Code Quality Check**: Validates code formatting with Prettier
+   - **Build**: Creates production build and uploads artifacts
+   - **Test**: Runs unit tests with Vitest
+   - **Deploy**: Automatically deploys to GitHub Pages (test environment) on main branch
+   - Triggers on: Push to main/develop, Pull Requests
+
+2. **Pull Request Validation** (`pr-validation.yml`)
+   - Validates all PRs with comprehensive checks
+   - Posts build status as PR comment
+   - Ensures code quality before merging
+
+3. **Security Scanning** (`security.yml`)
+   - NPM dependency audit
+   - Dependency review for PRs
+   - Weekly scheduled scans
+   - Checks for vulnerabilities and outdated packages
+
+4. **CodeQL Analysis** (`codeql.yml`)
+   - Advanced code analysis for security vulnerabilities
+   - Weekly scheduled scans
+   - Security and quality queries
+
+### Test Environment
+
+The application is automatically deployed to **GitHub Pages** as a test environment when changes are pushed to the main branch. 
+
+**Test Environment URL**: `https://alexmacavei.github.io/todl-frontend/`
+
+### Build Artifacts
+
+Production-ready build artifacts are generated and stored for 30 days on every successful build. These can be downloaded from the Actions tab and deployed to any hosting environment.
+
+### Development Workflow
+
+1. Create a feature branch from `develop`
+2. Make your changes and commit
+3. Push your branch - automated checks will run
+4. Create a Pull Request - validation workflow will run
+5. After approval and merge to main - automatic deployment to test environment
 
 ## Technology Stack
 
@@ -250,11 +301,46 @@ The application expects the backend API to be available at the configured `apiUr
 
 ## Contributing
 
+Contributions are welcome! Please follow these steps:
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+### CI/CD Requirements
+
+All contributions must pass the automated CI/CD checks:
+
+- ✅ Code formatting with Prettier
+- ✅ Successful production build
+- ✅ All unit tests passing
+- ✅ Security and dependency checks
+- ✅ CodeQL analysis
+
+The PR validation workflow will automatically run and comment on your PR with the results. Please ensure all checks pass before requesting review.
+
+### Running Checks Locally
+
+Before pushing your changes, you can run the same checks locally:
+
+```bash
+# Check code formatting
+npx prettier --check "src/**/*.{ts,html,scss}"
+
+# Fix formatting issues
+npx prettier --write "src/**/*.{ts,html,scss}"
+
+# Build the application
+npm run build
+
+# Run tests
+npm test
+
+# Check for security vulnerabilities
+npm audit
+```
 
 ## License
 
