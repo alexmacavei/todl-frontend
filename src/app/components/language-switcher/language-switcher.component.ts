@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { LanguageService } from '../../services/language.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language-switcher',
@@ -51,9 +52,17 @@ export class LanguageSwitcherComponent {
   availableLanguages: string[];
   currentLanguage: string;
 
-  constructor(public languageService: LanguageService) {
+  constructor(
+    public languageService: LanguageService,
+    private translate: TranslateService
+  ) {
     this.availableLanguages = this.languageService.getAvailableLanguages();
     this.currentLanguage = this.languageService.getCurrentLanguage();
+    
+    // Subscribe to language changes to keep UI in sync
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLanguage = event.lang;
+    });
   }
 
   switchLanguage(lang: string): void {

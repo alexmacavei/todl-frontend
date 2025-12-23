@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LanguageService } from './services/language.service';
@@ -9,10 +9,7 @@ import { LanguageService } from './services/language.service';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App implements OnInit {
+export class App {
+  // Initialize language service to set up translations
   private languageService = inject(LanguageService);
-
-  ngOnInit(): void {
-    // Language service is automatically initialized in constructor
-  }
 }
