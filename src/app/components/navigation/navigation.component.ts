@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { AuthService } from '@auth0/auth0-angular';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
   selector: 'app-navigation',
@@ -16,7 +18,9 @@ import { AuthService } from '@auth0/auth0-angular';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    TranslateModule,
+    LanguageSwitcherComponent
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'

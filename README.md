@@ -86,25 +86,72 @@ npm start
 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-### Development Server with Romanian Locale
-
-To run the development server with Romanian translations:
-```bash
-npm run start:ro
-```
-
 ## Internationalization (i18n)
 
-The application supports multiple languages using Angular's built-in i18n features.
+The application supports **runtime language switching** using ngx-translate, allowing users to change the language without reloading the application.
 
 ### Available Languages
 
-- **English (en)** - Default language
-- **Romanian (ro)** - Romanian translation
+- **English (en)** - Default language 🇬🇧
+- **Romanian (ro)** - Romanian translation 🇷🇴
 
-### Building for Specific Locales
+### Switching Languages
 
-Build the application for a specific locale:
+Users can switch languages using the language switcher in the top-right corner of the navigation bar. The language selection is:
+- **Flag icon** in the toolbar showing the current language
+- Click to open a dropdown menu with available languages
+- Selected language is saved in browser's local storage
+- No page reload required - translations update instantly
+
+### Translation Format
+
+Translations use the `translate` pipe in templates:
+
+```html
+<!-- Using translate pipe -->
+<h1>{{ 'home.welcomeTitle' | translate }}</h1>
+<button>{{ 'common.cancel' | translate }}</button>
+```
+
+### Adding New Translations
+
+1. Add translations to the JSON files in `public/locale/`:
+   - `messages.en.json` - English translations
+   - `messages.ro.json` - Romanian translations
+
+2. Use the translation key in your template:
+```html
+<p>{{ 'your.new.key' | translate }}</p>
+```
+
+3. The translation will be loaded automatically when the language is selected
+
+### Translation Files Structure
+
+```json
+{
+  "locale": "en",
+  "translations": {
+    "app.title": "TODL Library",
+    "nav.books": "Books",
+    "common.cancel": "Cancel"
+  }
+}
+```
+
+### Adding New Languages
+
+To add a new language:
+
+1. Create a new translation file: `public/locale/messages.[lang].json`
+2. Add the language to `LanguageService` in `src/app/services/language.service.ts`:
+   - Add to `AVAILABLE_LANGUAGES` array
+   - Add language name to `getLanguageName()` method
+   - Add flag emoji to `getLanguageFlag()` method
+
+### Legacy Build-time i18n
+
+For backwards compatibility, the application still supports build-time i18n:
 
 ```bash
 # Build for English (default)
@@ -117,27 +164,7 @@ npm run build:ro
 npm run build:all
 ```
 
-The build artifacts will be stored in the `dist/todl-app` directory.
-
-### Adding New Translations
-
-1. Mark text for translation in templates using `i18n` attributes:
-```html
-<h1 i18n="@@unique.id">Text to translate</h1>
-```
-
-2. Extract messages to generate source translation file:
-```bash
-npm run extract-i18n
-```
-
-3. Update the translation files in `src/locale/`:
-   - `messages.xlf` - Source messages (English)
-   - `messages.ro.json` - Romanian translations
-
-4. Add new translations in the respective JSON file following the existing format
-
-### Locale Configuration
+However, **runtime language switching is now the recommended approach** as it provides a better user experience.
 
 Locale configuration is defined in `angular.json`:
 - Source locale: `en` (English)

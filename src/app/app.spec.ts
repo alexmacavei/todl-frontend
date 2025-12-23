@@ -4,16 +4,29 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { AuthService } from '@auth0/auth0-angular';
+import { TranslateModule, TranslateService, TranslateLoader, TranslateStore } from '@ngx-translate/core';
 import { of } from 'rxjs';
+
+class MockTranslateLoader implements TranslateLoader {
+  getTranslation(lang: string) {
+    return of({});
+  }
+}
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [
+        App,
+        TranslateModule.forRoot({
+          loader: { provide: TranslateLoader, useClass: MockTranslateLoader }
+        })
+      ],
       providers: [
         provideRouter([]),
         provideHttpClient(),
         provideAnimations(),
+        TranslateStore,
         {
           provide: AuthService,
           useValue: {
@@ -25,6 +38,10 @@ describe('App', () => {
         }
       ]
     }).compileComponents();
+    
+    const translateService = TestBed.inject(TranslateService);
+    translateService.setDefaultLang('en');
+    translateService.use('en');
   });
 
   it('should create the app', () => {

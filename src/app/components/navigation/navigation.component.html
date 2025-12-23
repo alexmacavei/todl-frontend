@@ -1,12 +1,14 @@
 <mat-toolbar color="primary">
-  <span class="toolbar-title" i18n="@@app.title">TODL Library</span>
+  <span class="toolbar-title">{{ 'app.title' | translate }}</span>
   <span class="spacer"></span>
   
   @if (auth.isAuthenticated$ | async) {
-    <a mat-button routerLink="/books" routerLinkActive="active" i18n="@@nav.books">Books</a>
-    <a mat-button routerLink="/authors" routerLinkActive="active" i18n="@@nav.authors">Authors</a>
-    <a mat-button routerLink="/collections" routerLinkActive="active" i18n="@@nav.collections">Collections</a>
-    <a mat-button routerLink="/search" routerLinkActive="active" i18n="@@nav.search">Search</a>
+    <a mat-button routerLink="/books" routerLinkActive="active">{{ 'nav.books' | translate }}</a>
+    <a mat-button routerLink="/authors" routerLinkActive="active">{{ 'nav.authors' | translate }}</a>
+    <a mat-button routerLink="/collections" routerLinkActive="active">{{ 'nav.collections' | translate }}</a>
+    <a mat-button routerLink="/search" routerLinkActive="active">{{ 'nav.search' | translate }}</a>
+    
+    <app-language-switcher></app-language-switcher>
     
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>account_circle</mat-icon>
@@ -17,13 +19,15 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="logout()">
         <mat-icon>exit_to_app</mat-icon>
-        <span i18n="@@nav.logout">Logout</span>
+        <span>{{ 'nav.logout' | translate }}</span>
       </button>
     </mat-menu>
   } @else {
+    <app-language-switcher></app-language-switcher>
+    
     <button mat-button (click)="login()">
       <mat-icon>login</mat-icon>
-      <span i18n="@@nav.login">Login</span>
+      <span>{{ 'nav.login' | translate }}</span>
     </button>
   }
 </mat-toolbar>
