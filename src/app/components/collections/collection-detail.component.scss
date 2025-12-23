@@ -1,0 +1,124 @@
+.detail-container {
+  padding: 20px;
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+
+  .detail-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+      }
+    }
+
+    .info-card {
+      margin-bottom: 30px;
+
+      .description {
+        margin: 10px 0;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .meta {
+        margin: 5px 0;
+        font-size: 0.9rem;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .books-section {
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .add-book-section {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 30px;
+
+        mat-form-field {
+          flex: 1;
+          max-width: 400px;
+        }
+      }
+
+      .empty-books {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        text-align: center;
+
+        mat-icon {
+          font-size: 48px;
+          height: 48px;
+          width: 48px;
+          color: rgba(0, 0, 0, 0.26);
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-size: 1.1rem;
+          color: rgba(0, 0, 0, 0.54);
+        }
+      }
+
+      .books-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+
+        mat-card {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          mat-card-content {
+            flex: 1;
+
+            .book-description {
+              margin: 10px 0;
+              color: rgba(0, 0, 0, 0.7);
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+
+            .isbn {
+              margin: 10px 0;
+              font-size: 0.9rem;
+            }
+          }
+
+          mat-card-actions {
+            padding: 8px 16px;
+            display: flex;
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,9 @@ import { BookDetailComponent } from './components/books/book-detail.component';
 import { AuthorsListComponent } from './components/authors/authors-list.component';
 import { AuthorFormComponent } from './components/authors/author-form.component';
 import { AuthorDetailComponent } from './components/authors/author-detail.component';
+import { CollectionsListComponent } from './components/collections/collections-list.component';
+import { CollectionFormComponent } from './components/collections/collection-form.component';
+import { CollectionDetailComponent } from './components/collections/collection-detail.component';
 import { SearchComponent } from './components/search/search.component';
 
 export const routes: Routes = [
@@ -19,6 +22,10 @@ export const routes: Routes = [
   { path: 'authors/new', component: AuthorFormComponent, canActivate: [authGuard] },
   { path: 'authors/:id', component: AuthorDetailComponent, canActivate: [authGuard] },
   { path: 'authors/:id/edit', component: AuthorFormComponent, canActivate: [authGuard] },
+  { path: 'collections', component: CollectionsListComponent, canActivate: [authGuard] },
+  { path: 'collections/new', component: CollectionFormComponent, canActivate: [authGuard] },
+  { path: 'collections/:id', component: CollectionDetailComponent, canActivate: [authGuard] },
+  { path: 'collections/:id/edit', component: CollectionFormComponent, canActivate: [authGuard] },
   { path: 'search', component: SearchComponent, canActivate: [authGuard] },
   { path: '**', redirectTo: '' }
 ];
