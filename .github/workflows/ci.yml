@@ -117,7 +117,7 @@ jobs:
         run: npm ci
       
       - name: Build for GitHub Pages
-        run: npm run build -- --base-href=/todl-frontend/
+        run: npm run build -- --configuration=github-pages --base-href=/todl-frontend/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -125,7 +125,7 @@ jobs:
       - name: Upload artifact to Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/todl-app'
+          path: 'dist/todl-app/browser'
       
       - name: Deploy to GitHub Pages
         id: deployment
