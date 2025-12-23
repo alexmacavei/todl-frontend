@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { form, Field, required } from '@angular/forms/signals';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,11 +11,17 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ApiService } from '../../services/api.service';
 
+interface CollectionFormData {
+  name: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-collection-form',
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    Field,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -31,9 +38,13 @@ export class CollectionFormComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private snackBar = inject(MatSnackBar);
 
-  collectionForm = new FormGroup({
-    name: new FormControl('', { validators: [Validators.required] }),
-    description: new FormControl('')
+  collectionModel = signal<CollectionFormData>({
+    name: '',
+    description: ''
+  });
+
+  collectionForm = form(this.collectionModel, (path) => {
+    required(path.name, { message: 'Name is required' });
   });
 
   loading = signal(true);
@@ -54,9 +65,9 @@ export class CollectionFormComponent implements OnInit {
   loadCollection(id: number): void {
     this.apiService.getCollection(id).subscribe({
       next: (collection) => {
-        this.collectionForm.patchValue({
+        this.collectionModel.set({
           name: collection.name,
-          description: collection.description
+          description: collection.description || ''
         });
         this.loading.set(false);
       },
@@ -69,11 +80,8 @@ export class CollectionFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.collectionForm.valid) {
-      const collectionData = {
-        name: this.collectionForm.value.name || '',
-        description: this.collectionForm.value.description || ''
-      };
+    if (this.collectionForm.name().valid()) {
+      const collectionData = this.collectionModel();
       this.loading.set(true);
 
       const operation = this.isEditMode()
