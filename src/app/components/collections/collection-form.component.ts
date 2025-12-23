@@ -71,8 +71,8 @@ export class CollectionFormComponent implements OnInit {
   onSubmit(): void {
     if (this.collectionForm.valid) {
       const collectionData = {
-        name: this.collectionForm.value.name!,
-        description: this.collectionForm.value.description || undefined
+        name: this.collectionForm.value.name || '',
+        description: this.collectionForm.value.description || ''
       };
       this.loading.set(true);
 
