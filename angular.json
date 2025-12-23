@@ -20,7 +20,7 @@
         "sourceLocale": "en",
         "locales": {
           "ro": {
-            "translation": "src/locale/messages.ro.json"
+            "translation": "public/locale/messages.ro.json"
           }
         }
       },

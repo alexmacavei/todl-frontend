@@ -25,7 +25,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/book-detail.component.html</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">59,60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="author.nationality" datatype="html">
@@ -40,7 +40,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/book-detail.component.html</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">53,54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="author.biography" datatype="html">
@@ -55,7 +55,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/book-detail.component.html</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">65,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="authors.backToList" datatype="html">
@@ -73,11 +73,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/authors/authors-list.component.html</context>
-          <context context-type="linenumber">45,47</context>
+          <context context-type="linenumber">47,49</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/book-detail.component.html</context>
-          <context context-type="linenumber">72,74</context>
+          <context context-type="linenumber">81,83</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/books-list.component.html</context>
@@ -89,7 +89,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collections-list.component.html</context>
-          <context context-type="linenumber">42,44</context>
+          <context context-type="linenumber">44,46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="common.delete" datatype="html">
@@ -100,11 +100,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/authors/authors-list.component.html</context>
-          <context context-type="linenumber">49,50</context>
+          <context context-type="linenumber">51,52</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/book-detail.component.html</context>
-          <context context-type="linenumber">76,78</context>
+          <context context-type="linenumber">85,87</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/books-list.component.html</context>
@@ -194,32 +194,32 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">69,71</context>
+          <context context-type="linenumber">74,76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="authors.addFirstAuthor" datatype="html">
         <source>Add Your First Author</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/authors/authors-list.component.html</context>
-          <context context-type="linenumber">18,21</context>
+          <context context-type="linenumber">19,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="author.born" datatype="html">
         <source>Born:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/authors/authors-list.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">34</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="common.view" datatype="html">
         <source>View</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/authors/authors-list.component.html</context>
-          <context context-type="linenumber">41,43</context>
+          <context context-type="linenumber">43,45</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/books-list.component.html</context>
@@ -227,11 +227,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">77,78</context>
+          <context context-type="linenumber">83,84</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collections-list.component.html</context>
-          <context context-type="linenumber">38,40</context>
+          <context context-type="linenumber">40,42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="books.by" datatype="html">
@@ -246,11 +246,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">68</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="book.descriptionTitle" datatype="html">
@@ -276,11 +276,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">77</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="book.publishedDate" datatype="html">
@@ -310,7 +310,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="book.authorInfo" datatype="html">
@@ -324,7 +324,7 @@
         <source>Back to List</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/books/book-detail.component.html</context>
-          <context context-type="linenumber">67,69</context>
+          <context context-type="linenumber">76,78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="book.editTitle" datatype="html">
@@ -412,7 +412,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">28,30</context>
+          <context context-type="linenumber">33,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="books.addFirstBook" datatype="html">
@@ -440,49 +440,49 @@
         <source>Created:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collection.updated" datatype="html">
         <source>Updated:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">35,36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collection.booksInCollection" datatype="html">
         <source>Books in this Collection</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">37,39</context>
+          <context context-type="linenumber">43,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collection.addBook" datatype="html">
         <source>Add a book</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">47,48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collections.addBookButton" datatype="html">
         <source>Add Book</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">50,52</context>
+          <context context-type="linenumber">56,58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collection.removeBook" datatype="html">
         <source>Remove</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">81,83</context>
+          <context context-type="linenumber">87,89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collection.noBooksYet" datatype="html">
         <source>No books in this collection yet</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collection-detail.component.html</context>
-          <context context-type="linenumber">90,93</context>
+          <context context-type="linenumber">96,99</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collection.editTitle" datatype="html">
@@ -559,221 +559,14 @@
         <source>Add Your First Collection</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collections-list.component.html</context>
-          <context context-type="linenumber">18,21</context>
+          <context context-type="linenumber">19,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="collections.books" datatype="html">
         <source>Books:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/collections/collections-list.component.html</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.welcomeTitle" datatype="html">
-        <source>Welcome to TODL Library</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">4,5</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">71,72</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.hello" datatype="html">
-        <source>Hello, <x id="INTERPOLATION" equiv-text="{{ user.name }}"/>!</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">6,8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.subtitle" datatype="html">
-        <source>Manage your book collection and discover new authors.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">8,11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.booksTitle" datatype="html">
-        <source>Books</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">15,16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.booksSubtitle" datatype="html">
-        <source>Manage your book collection</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">16,17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.booksDescription" datatype="html">
-        <source>Browse, create, edit, and delete books in your library. Keep track of all your favorite titles.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">19,21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.goToBooks" datatype="html">
-        <source>Go to Books</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">22,23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.authorsTitle" datatype="html">
-        <source>Authors</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">29,30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.authorsSubtitle" datatype="html">
-        <source>Manage author information</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">30,31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.authorsDescription" datatype="html">
-        <source>Add and manage information about your favorite authors. Track their biographies and works.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">33,35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.goToAuthors" datatype="html">
-        <source>Go to Authors</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">36,37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.collectionsTitle" datatype="html">
-        <source>Collections</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">43,44</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.collectionsSubtitle" datatype="html">
-        <source>Organize books into collections</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">44,45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.collectionsDescription" datatype="html">
-        <source>Create custom collections and organize your books into meaningful groups.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">47,49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.goToCollections" datatype="html">
-        <source>Go to Collections</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">50,52</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.searchTitle" datatype="html">
-        <source>Search</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">57,58</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.searchSubtitle" datatype="html">
-        <source>Find books and authors</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">58,59</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.searchDescription" datatype="html">
-        <source>Quickly search through your entire library to find the books and authors you&apos;re looking for.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">61,63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.goToSearch" datatype="html">
-        <source>Go to Search</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">64,65</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.loginSubtitle" datatype="html">
-        <source>Your personal book management system</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">72,73</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.loginMessage" datatype="html">
-        <source>Please log in to access your library and manage your books and authors.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">73,74</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="home.loginButton" datatype="html">
-        <source>Log In</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
-          <context context-type="linenumber">76,78</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="app.title" datatype="html">
-        <source>TODL Library</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
-          <context context-type="linenumber">2,3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="nav.books" datatype="html">
-        <source>Books</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
-          <context context-type="linenumber">6,7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="nav.authors" datatype="html">
-        <source>Authors</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
-          <context context-type="linenumber">7,8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="nav.collections" datatype="html">
-        <source>Collections</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
-          <context context-type="linenumber">8,9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="nav.search" datatype="html">
-        <source>Search</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
-          <context context-type="linenumber">9,11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="nav.logout" datatype="html">
-        <source>Logout</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
-          <context context-type="linenumber">20,22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="nav.login" datatype="html">
-        <source>Login</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/navigation/navigation.component.html</context>
-          <context context-type="linenumber">26,28</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="search.title" datatype="html">
@@ -787,46 +580,46 @@
         <source>Search books and authors</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">6,7</context>
+          <context context-type="linenumber">6,8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="search.placeholder" datatype="html">
         <source>Enter search term...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">7,8</context>
+          <context context-type="linenumber">11,13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="search.booksTab" datatype="html">
         <source>Books (<x id="INTERPOLATION" equiv-text="{{ books().length }}"/>)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">23,24</context>
+          <context context-type="linenumber">28,29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="search.viewDetails" datatype="html">
         <source>View Details</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">54,56</context>
+          <context context-type="linenumber">59,61</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">92,94</context>
+          <context context-type="linenumber">97,99</context>
         </context-group>
       </trans-unit>
       <trans-unit id="search.authorsTab" datatype="html">
         <source>Authors (<x id="INTERPOLATION" equiv-text="{{ authors().length }}"/>)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">64,65</context>
+          <context context-type="linenumber">69,70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="search.enterSearchTerm" datatype="html">
         <source>Enter a search term to find books and authors</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/search/search.component.html</context>
-          <context context-type="linenumber">105,109</context>
+          <context context-type="linenumber">110,114</context>
         </context-group>
       </trans-unit>
     </body>
