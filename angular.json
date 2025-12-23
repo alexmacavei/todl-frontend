@@ -78,6 +78,13 @@
               "localize": ["ro"]
             },
             "github-pages": {
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
+              "extractLicenses": false,
+              "sourceMap": false,
               "budgets": [
                 {
                   "type": "initial",
