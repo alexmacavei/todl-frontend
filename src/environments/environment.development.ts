@@ -1,3 +1,5 @@
+// Development environment configuration
+// Used when running locally with `npm start`
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:3000',
