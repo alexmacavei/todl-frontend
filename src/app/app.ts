@@ -11,5 +11,6 @@ import { LanguageService } from './services/language.service';
 })
 export class App {
   // Initialize language service to set up translations
+  // noinspection JSUnusedLocalSymbols
   private languageService = inject(LanguageService);
 }

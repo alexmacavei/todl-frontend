@@ -62,7 +62,7 @@ export class AuthorFormComponent implements OnInit {
   loadAuthor(id: number): void {
     this.loading.set(true);
     this.apiService.getAuthor(id).subscribe({
-      next: (author) => {
+      next: author => {
         this.authorForm.patchValue({
           name: author.name,
           biography: author.biography,
@@ -71,7 +71,7 @@ export class AuthorFormComponent implements OnInit {
         });
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading author:', error);
         this.snackBar.open('Error loading author', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -94,7 +94,7 @@ export class AuthorFormComponent implements OnInit {
           this.snackBar.open(message, 'Close', { duration: 3000 });
           this.router.navigate(['/authors']);
         },
-        error: (error) => {
+        error: error => {
           console.error('Error saving author:', error);
           this.snackBar.open('Error saving author', 'Close', { duration: 3000 });
           this.loading.set(false);

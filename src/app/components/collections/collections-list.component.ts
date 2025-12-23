@@ -37,11 +37,11 @@ export class CollectionsListComponent implements OnInit {
   loadCollections(): void {
     this.loading.set(true);
     this.apiService.getCollections().subscribe({
-      next: (collections) => {
+      next: collections => {
         this.collections.set(collections);
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading collections:', error);
         this.snackBar.open('Error loading collections', 'Close', { duration: 3000 });
         this.loading.set(false);

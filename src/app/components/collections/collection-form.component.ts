@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { form, Field, required } from '@angular/forms/signals';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
@@ -27,7 +27,8 @@ interface CollectionFormData {
     MatInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule
   ],
   templateUrl: './collection-form.component.html',
   styleUrl: './collection-form.component.scss'
@@ -43,7 +44,7 @@ export class CollectionFormComponent implements OnInit {
     description: ''
   });
 
-  collectionForm = form(this.collectionModel, (path) => {
+  collectionForm = form(this.collectionModel, path => {
     required(path.name, { message: 'Name is required' });
   });
 
@@ -64,14 +65,14 @@ export class CollectionFormComponent implements OnInit {
 
   loadCollection(id: number): void {
     this.apiService.getCollection(id).subscribe({
-      next: (collection) => {
+      next: collection => {
         this.collectionModel.set({
           name: collection.name,
           description: collection.description || ''
         });
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading collection:', error);
         this.snackBar.open('Error loading collection', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -94,7 +95,7 @@ export class CollectionFormComponent implements OnInit {
           this.snackBar.open(message, 'Close', { duration: 3000 });
           this.router.navigate(['/collections']);
         },
-        error: (error) => {
+        error: error => {
           console.error('Error saving collection:', error);
           this.snackBar.open('Error saving collection', 'Close', { duration: 3000 });
           this.loading.set(false);

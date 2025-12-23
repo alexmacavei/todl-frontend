@@ -23,30 +23,32 @@ import { TranslateService } from '@ngx-translate/core';
       }
     </mat-menu>
   `,
-  styles: [`
-    .language-switcher {
-      margin-left: 8px;
-    }
-    
-    .flag {
-      font-size: 24px;
-      line-height: 1;
-    }
-    
-    mat-menu button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    mat-menu button.active {
-      background-color: rgba(0, 0, 0, 0.04);
-    }
-    
-    mat-menu button .flag {
-      font-size: 20px;
-    }
-  `]
+  styles: [
+    `
+      .language-switcher {
+        margin-left: 8px;
+      }
+
+      .flag {
+        font-size: 24px;
+        line-height: 1;
+      }
+
+      mat-menu button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      mat-menu button.active {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+
+      mat-menu button .flag {
+        font-size: 20px;
+      }
+    `
+  ]
 })
 export class LanguageSwitcherComponent {
   availableLanguages: string[];
@@ -58,9 +60,9 @@ export class LanguageSwitcherComponent {
   ) {
     this.availableLanguages = this.languageService.getAvailableLanguages();
     this.currentLanguage = this.languageService.getCurrentLanguage();
-    
+
     // Subscribe to language changes to keep UI in sync
-    this.translate.onLangChange.subscribe((event) => {
+    this.translate.onLangChange.subscribe(event => {
       this.currentLanguage = event.lang;
     });
   }

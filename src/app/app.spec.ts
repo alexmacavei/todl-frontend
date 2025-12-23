@@ -38,7 +38,7 @@ describe('App', () => {
         }
       ]
     }).compileComponents();
-    
+
     const translateService = TestBed.inject(TranslateService);
     translateService.setDefaultLang('en');
     translateService.use('en');

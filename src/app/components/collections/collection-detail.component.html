@@ -25,17 +25,23 @@
             <p class="description">{{ collection()!.description }}</p>
           }
           @if (collection()!.createdAt) {
-            <p class="meta"><strong i18n="@@collection.created">Created:</strong> {{ collection()!.createdAt | date }}</p>
+            <p class="meta">
+              <strong i18n="@@collection.created">Created:</strong>
+              {{ collection()!.createdAt | date }}
+            </p>
           }
           @if (collection()!.updatedAt) {
-            <p class="meta"><strong i18n="@@collection.updated">Updated:</strong> {{ collection()!.updatedAt | date }}</p>
+            <p class="meta">
+              <strong i18n="@@collection.updated">Updated:</strong>
+              {{ collection()!.updatedAt | date }}
+            </p>
           }
         </mat-card-content>
       </mat-card>
 
       <div class="books-section">
         <h2 i18n="@@collection.booksInCollection">Books in this Collection</h2>
-        
+
         <div class="add-book-section">
           <mat-form-field appearance="fill">
             <mat-label i18n="@@collection.addBook">Add a book</mat-label>

@@ -52,11 +52,11 @@ export class CollectionDetailComponent implements OnInit {
 
   loadCollection(id: number): void {
     this.apiService.getCollection(id).subscribe({
-      next: (collection) => {
+      next: collection => {
         this.collection.set(collection);
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading collection:', error);
         this.snackBar.open('Error loading collection', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -68,11 +68,11 @@ export class CollectionDetailComponent implements OnInit {
   loadAvailableBooks(): void {
     this.loadingBooks.set(true);
     this.apiService.getBooks().subscribe({
-      next: (books) => {
+      next: books => {
         this.availableBooks.set(books);
         this.loadingBooks.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading books:', error);
         this.snackBar.open('Error loading books', 'Close', { duration: 3000 });
         this.loadingBooks.set(false);
@@ -84,12 +84,12 @@ export class CollectionDetailComponent implements OnInit {
     const collection = this.collection();
     if (collection && collection.id && this.selectedBookId) {
       this.apiService.addBookToCollection(collection.id, this.selectedBookId).subscribe({
-        next: (updatedCollection) => {
+        next: updatedCollection => {
           this.collection.set(updatedCollection);
           this.selectedBookId = null;
           this.snackBar.open('Book added to collection successfully', 'Close', { duration: 3000 });
         },
-        error: (error) => {
+        error: error => {
           console.error('Error adding book to collection:', error);
           this.snackBar.open('Error adding book to collection', 'Close', { duration: 3000 });
         }
@@ -104,9 +104,11 @@ export class CollectionDetailComponent implements OnInit {
         next: () => {
           // Refresh collection data
           this.loadCollection(collection.id!);
-          this.snackBar.open('Book removed from collection successfully', 'Close', { duration: 3000 });
+          this.snackBar.open('Book removed from collection successfully', 'Close', {
+            duration: 3000
+          });
         },
-        error: (error) => {
+        error: error => {
           console.error('Error removing book from collection:', error);
           this.snackBar.open('Error removing book from collection', 'Close', { duration: 3000 });
         }

@@ -37,11 +37,11 @@ export class AuthorsListComponent implements OnInit {
   loadAuthors(): void {
     this.loading.set(true);
     this.apiService.getAuthors().subscribe({
-      next: (authors) => {
+      next: authors => {
         this.authors.set(authors);
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading authors:', error);
         this.snackBar.open('Error loading authors', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -56,7 +56,7 @@ export class AuthorsListComponent implements OnInit {
           this.snackBar.open('Author deleted successfully', 'Close', { duration: 3000 });
           this.loadAuthors();
         },
-        error: (error) => {
+        error: error => {
           console.error('Error deleting author:', error);
           this.snackBar.open('Error deleting author', 'Close', { duration: 3000 });
         }

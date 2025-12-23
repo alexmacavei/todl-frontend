@@ -37,11 +37,11 @@ export class BooksListComponent implements OnInit {
   loadBooks(): void {
     this.loading.set(true);
     this.apiService.getBooks().subscribe({
-      next: (books) => {
+      next: books => {
         this.books.set(books);
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading books:', error);
         this.snackBar.open('Error loading books', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -56,7 +56,7 @@ export class BooksListComponent implements OnInit {
           this.snackBar.open('Book deleted successfully', 'Close', { duration: 3000 });
           this.loadBooks();
         },
-        error: (error) => {
+        error: error => {
           console.error('Error deleting book:', error);
           this.snackBar.open('Error deleting book', 'Close', { duration: 3000 });
         }

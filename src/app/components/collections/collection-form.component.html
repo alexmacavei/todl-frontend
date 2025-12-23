@@ -9,7 +9,7 @@
         }
       </mat-card-title>
     </mat-card-header>
-    
+
     @if (loading()) {
       <mat-card-content>
         <div class="loading">
@@ -21,7 +21,7 @@
         <form (ngSubmit)="onSubmit()">
           <mat-form-field appearance="fill">
             <mat-label i18n="@@collection.name">Name</mat-label>
-            <input matInput [field]="collectionForm.name">
+            <input matInput [field]="collectionForm.name" />
             @if (collectionForm.name().touched() && !collectionForm.name().valid()) {
               <mat-error i18n="@@collection.nameRequired">Name is required</mat-error>
             }

@@ -1,15 +1,15 @@
 <mat-toolbar color="primary">
   <span class="toolbar-title">{{ 'app.title' | translate }}</span>
   <span class="spacer"></span>
-  
+
   @if (auth.isAuthenticated$ | async) {
     <a mat-button routerLink="/books" routerLinkActive="active">{{ 'nav.books' | translate }}</a>
     <a mat-button routerLink="/authors" routerLinkActive="active">{{ 'nav.authors' | translate }}</a>
     <a mat-button routerLink="/collections" routerLinkActive="active">{{ 'nav.collections' | translate }}</a>
     <a mat-button routerLink="/search" routerLinkActive="active">{{ 'nav.search' | translate }}</a>
-    
+
     <app-language-switcher></app-language-switcher>
-    
+
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>account_circle</mat-icon>
       @if (auth.user$ | async; as user) {
@@ -24,7 +24,7 @@
     </mat-menu>
   } @else {
     <app-language-switcher></app-language-switcher>
-    
+
     <button mat-button (click)="login()">
       <mat-icon>login</mat-icon>
       <span>{{ 'nav.login' | translate }}</span>

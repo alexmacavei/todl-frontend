@@ -41,11 +41,11 @@ export class BookDetailComponent implements OnInit {
 
   loadBook(id: number): void {
     this.apiService.getBook(id).subscribe({
-      next: (book) => {
+      next: book => {
         this.book.set(book);
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading book:', error);
         this.snackBar.open('Error loading book', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -62,7 +62,7 @@ export class BookDetailComponent implements OnInit {
           this.snackBar.open('Book deleted successfully', 'Close', { duration: 3000 });
           this.router.navigate(['/books']);
         },
-        error: (error) => {
+        error: error => {
           console.error('Error deleting book:', error);
           this.snackBar.open('Error deleting book', 'Close', { duration: 3000 });
         }

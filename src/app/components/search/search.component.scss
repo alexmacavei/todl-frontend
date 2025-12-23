@@ -58,7 +58,8 @@ mat-card {
   mat-card-content {
     flex-grow: 1;
 
-    .description, .biography {
+    .description,
+    .biography {
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;

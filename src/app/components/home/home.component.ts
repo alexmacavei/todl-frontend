@@ -9,14 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    CommonModule,
-    RouterLink,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    TranslateModule
-  ],
+  imports: [CommonModule, RouterLink, MatCardModule, MatButtonModule, MatIconModule, TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

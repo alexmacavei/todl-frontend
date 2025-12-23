@@ -16,16 +16,14 @@ export class LanguageService {
   private initializeLanguage(): void {
     // Set available languages
     this.translate.addLangs(this.AVAILABLE_LANGUAGES);
-    
+
     // Set default language
     this.translate.setDefaultLang(this.DEFAULT_LANGUAGE);
-    
+
     // Get saved language or use default
     const savedLanguage = this.getSavedLanguage();
-    const languageToUse = this.AVAILABLE_LANGUAGES.includes(savedLanguage) 
-      ? savedLanguage 
-      : this.DEFAULT_LANGUAGE;
-    
+    const languageToUse = this.AVAILABLE_LANGUAGES.includes(savedLanguage) ? savedLanguage : this.DEFAULT_LANGUAGE;
+
     this.setLanguage(languageToUse);
   }
 
@@ -50,16 +48,16 @@ export class LanguageService {
 
   public getLanguageName(code: string): string {
     const names: { [key: string]: string } = {
-      'en': 'English',
-      'ro': 'Română'
+      en: 'English',
+      ro: 'Română'
     };
     return names[code] || code;
   }
 
   public getLanguageFlag(code: string): string {
     const flags: { [key: string]: string } = {
-      'en': '🇬🇧',
-      'ro': '🇷🇴'
+      en: '🇬🇧',
+      ro: '🇷🇴'
     };
     return flags[code] || '🌐';
   }

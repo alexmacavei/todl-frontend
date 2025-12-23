@@ -88,7 +88,9 @@ export class ApiService {
   }
 
   addBookToCollection(collectionId: number, bookId: number): Observable<Collection> {
-    return this.http.post<Collection>(`${this.apiUrl}/collections/${collectionId}/books`, { bookId });
+    return this.http.post<Collection>(`${this.apiUrl}/collections/${collectionId}/books`, {
+      bookId
+    });
   }
 
   removeBookFromCollection(collectionId: number, bookId: number): Observable<void> {

@@ -44,20 +44,15 @@ export class SearchComponent {
   hasSearched = signal(false);
 
   constructor() {
-    this.searchControl.valueChanges
-      .pipe(
-        debounceTime(400),
-        distinctUntilChanged()
-      )
-      .subscribe(value => {
-        if (value && value.trim().length > 0) {
-          this.performSearch(value);
-        } else {
-          this.books.set([]);
-          this.authors.set([]);
-          this.hasSearched.set(false);
-        }
-      });
+    this.searchControl.valueChanges.pipe(debounceTime(400), distinctUntilChanged()).subscribe(value => {
+      if (value && value.trim().length > 0) {
+        this.performSearch(value);
+      } else {
+        this.books.set([]);
+        this.authors.set([]);
+        this.hasSearched.set(false);
+      }
+    });
   }
 
   performSearch(query: string): void {
@@ -65,11 +60,11 @@ export class SearchComponent {
     this.hasSearched.set(true);
 
     this.apiService.searchBooks(query).subscribe({
-      next: (books) => {
+      next: books => {
         this.books.set(books);
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error searching books:', error);
         this.snackBar.open('Error searching books', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -77,10 +72,10 @@ export class SearchComponent {
     });
 
     this.apiService.searchAuthors(query).subscribe({
-      next: (authors) => {
+      next: authors => {
         this.authors.set(authors);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error searching authors:', error);
         this.snackBar.open('Error searching authors', 'Close', { duration: 3000 });
       }

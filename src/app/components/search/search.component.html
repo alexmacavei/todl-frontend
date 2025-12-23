@@ -4,7 +4,12 @@
   <div class="search-box">
     <mat-form-field appearance="outline" class="full-width">
       <mat-label i18n="@@search.searchLabel">Search books and authors</mat-label>
-      <input matInput [formControl]="searchControl" i18n-placeholder="@@search.placeholder" placeholder="Enter search term...">
+      <input
+        matInput
+        [formControl]="searchControl"
+        i18n-placeholder="@@search.placeholder"
+        placeholder="Enter search term..."
+      />
       <mat-icon matPrefix>search</mat-icon>
       @if (searchControl.value) {
         <button mat-icon-button matSuffix (click)="clearSearch()">

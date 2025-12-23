@@ -58,7 +58,7 @@ export class BookFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadAuthors();
-    
+
     const id = this.route.snapshot.paramMap.get('id');
     if (id && id !== 'new') {
       this.isEditMode.set(true);
@@ -71,10 +71,10 @@ export class BookFormComponent implements OnInit {
 
   loadAuthors(): void {
     this.apiService.getAuthors().subscribe({
-      next: (authors) => {
+      next: authors => {
         this.authors.set(authors);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading authors:', error);
         this.snackBar.open('Error loading authors', 'Close', { duration: 3000 });
       }
@@ -83,7 +83,7 @@ export class BookFormComponent implements OnInit {
 
   loadBook(id: number): void {
     this.apiService.getBook(id).subscribe({
-      next: (book) => {
+      next: book => {
         this.bookForm.patchValue({
           title: book.title,
           isbn: book.isbn,
@@ -94,7 +94,7 @@ export class BookFormComponent implements OnInit {
         });
         this.loading.set(false);
       },
-      error: (error) => {
+      error: error => {
         console.error('Error loading book:', error);
         this.snackBar.open('Error loading book', 'Close', { duration: 3000 });
         this.loading.set(false);
@@ -117,7 +117,7 @@ export class BookFormComponent implements OnInit {
           this.snackBar.open(message, 'Close', { duration: 3000 });
           this.router.navigate(['/books']);
         },
-        error: (error) => {
+        error: error => {
           console.error('Error saving book:', error);
           this.snackBar.open('Error saving book', 'Close', { duration: 3000 });
           this.loading.set(false);

@@ -49,13 +49,22 @@
             <h3 i18n="@@book.authorInfo">Author Information</h3>
             <p><strong i18n="@@author.name">Name:</strong> {{ book()!.author!.name }}</p>
             @if (book()!.author!.nationality) {
-              <p><strong i18n="@@author.nationality">Nationality:</strong> {{ book()!.author!.nationality }}</p>
+              <p>
+                <strong i18n="@@author.nationality">Nationality:</strong>
+                {{ book()!.author!.nationality }}
+              </p>
             }
             @if (book()!.author!.birthDate) {
-              <p><strong i18n="@@author.birthDate">Birth Date:</strong> {{ book()!.author!.birthDate | date }}</p>
+              <p>
+                <strong i18n="@@author.birthDate">Birth Date:</strong>
+                {{ book()!.author!.birthDate | date }}
+              </p>
             }
             @if (book()!.author!.biography) {
-              <p><strong i18n="@@author.biography">Biography:</strong> {{ book()!.author!.biography }}</p>
+              <p>
+                <strong i18n="@@author.biography">Biography:</strong>
+                {{ book()!.author!.biography }}
+              </p>
             }
           </div>
         }

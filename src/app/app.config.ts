@@ -35,11 +35,11 @@ export const appConfig: ApplicationConfig = {
             tokenOptions: {
               authorizationParams: {
                 // audience: environment.auth0.authorizationParams.audience,
-              },
-            },
-          },
-        ],
-      },
-    }),
-  ],
+              }
+            }
+          }
+        ]
+      }
+    })
+  ]
 };
